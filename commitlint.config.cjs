@@ -1,0 +1,45 @@
+module.exports = {
+  extends: ['@commitlint/config-conventional'],
+  rules: {
+    'type-enum': [
+      2,
+      'always',
+      [
+        'feat',
+        'fix',
+        'docs',
+        'style',
+        'refactor',
+        'perf',
+        'test',
+        'build',
+        'ci',
+        'chore',
+        'revert',
+      ],
+    ],
+    'scope-enum': [
+      2,
+      'always',
+      [
+        'setup',
+        'config',
+        'deps',
+        'feature',
+        'bug',
+        'docs',
+        'style',
+        'refactor',
+        'test',
+        'build',
+        'ci',
+        'release',
+        'other',
+      ],
+    ],
+    'header-max-length': [2, 'always', 72],
+    // conventional commits usually allow any case; if you want strict, keep it:
+    'subject-case': [2, 'always', ['lower-case']],
+    'body-leading-blank': [2, 'always'],
+  },
+};
