@@ -35,6 +35,8 @@ module.exports = {
         'ci',
         'release',
         'other',
+        'sign-in',
+        'home-page',
       ],
     ],
     'header-max-length': [2, 'always', 72],
