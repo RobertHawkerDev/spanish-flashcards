@@ -5,24 +5,8 @@ import { Eye, EyeOff, Loader2 } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { z } from 'zod';
 
-const signInSchema = z.object({
-  email: z
-    .email('Please enter a valid email address')
-    .min(1, 'Email is required.'),
-  password: z
-    .string()
-    .min(8, 'Password must be at least 8 characters')
-    .regex(/[A-Z]/, 'Password must contain at least one uppercase letter')
-    .regex(/\d/, 'Password must contain at least one number')
-    .regex(
-      /[^A-Za-z0-9]/,
-      'Password must contain at least one special character',
-    ),
-});
-
-type SignInValues = z.infer<typeof signInSchema>;
+import { signInSchema, SignInValues } from './sign-in-schema';
 
 export default function SignInForm() {
   const [showPassword, setShowPassword] = useState(false);
