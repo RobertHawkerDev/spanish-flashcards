@@ -38,7 +38,6 @@ module.exports = {
       ],
     ],
     'header-max-length': [2, 'always', 72],
-    // conventional commits usually allow any case; if you want strict, keep it:
     'subject-case': [2, 'always', ['lower-case']],
     'body-leading-blank': [2, 'always'],
   },

@@ -26,11 +26,8 @@ export default defineConfig([
       sonarjs,
     },
     rules: {
-      // Import ordering (Next doesn't enforce deterministic ordering)
       'simple-import-sort/imports': 'error',
       'simple-import-sort/exports': 'error',
-
-      // Extra bug-prevention & code-smell rules (not in Next defaults)
       ...unicorn.configs.recommended.rules,
       ...sonarjs.configs.recommended.rules,
     },
