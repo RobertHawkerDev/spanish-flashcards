@@ -43,6 +43,7 @@ module.exports = {
         'layout',
         'reset-email',
         'billing',
+        'deck',
       ],
     ],
     'header-max-length': [2, 'always', 72],
