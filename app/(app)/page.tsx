@@ -12,7 +12,7 @@ export default function HomePage() {
         {decks.map(deck => {
           return (
             <Link href="/" key={deck.id}>
-              <div className="flex flex-row items-start justify-between border-b border-b-neutral-300 bg-white py-4 sm:flex-col sm:rounded-lg sm:border-2 sm:border-black sm:p-2 sm:p-6">
+              <div className="flex flex-row items-start justify-between border-b border-b-neutral-300 bg-white py-4 sm:flex-col sm:rounded-lg sm:border-2 sm:border-black sm:p-6">
                 <div className="flex flex-row items-start gap-8">
                   <div className="relative h-12 w-12 sm:h-24 sm:w-24">
                     <Image fill alt="" src={deck.icon_svg} />
