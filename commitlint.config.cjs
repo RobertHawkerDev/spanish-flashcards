@@ -41,6 +41,7 @@ module.exports = {
         'sign-up',
         'home-page',
         'layout',
+        'reset-email',
       ],
     ],
     'header-max-length': [2, 'always', 72],
