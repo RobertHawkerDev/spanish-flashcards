@@ -5,7 +5,8 @@ import SignInForm from './sign-in-form';
 
 export const metadata: Metadata = {
   title: 'Sign In',
-  description: 'Sign in to your SpanishFlashcards account.',
+  description:
+    'Sign in to SpanishFlashcards and learn over 3000 everyday Spanish words with interactive flashcards. Improve your vocabulary and track your progress.',
 };
 
 export default function SignInPage() {

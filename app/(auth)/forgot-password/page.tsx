@@ -5,7 +5,8 @@ import ForgotPasswordForm from './forgot-password-form';
 
 export const metadata: Metadata = {
   title: 'Forgot Password',
-  description: 'Send passwod reset to get back into account.',
+  description:
+    'Forgot your password? Recover your SpanishFlashcards account quickly and securely and continue improving your Spanish vocabulary.',
 };
 
 export default function ForgotPasswordPage() {

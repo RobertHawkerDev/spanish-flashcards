@@ -6,7 +6,7 @@ import SignInForm from './reset-password-form';
 export const metadata: Metadata = {
   title: 'Reset Password',
   description:
-    'Reset you password to get back into your SpanishFlashcards account.',
+    'Reset your SpanishFlashcards password securely and regain access to your account to continue learning Spanish vocabulary.',
 };
 
 export default function ResetPasswordPage() {
