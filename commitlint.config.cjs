@@ -40,6 +40,7 @@ module.exports = {
         'reset-password',
         'sign-up',
         'home-page',
+        'layout',
       ],
     ],
     'header-max-length': [2, 'always', 72],
