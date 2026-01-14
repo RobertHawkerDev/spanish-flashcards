@@ -42,6 +42,7 @@ module.exports = {
         'home-page',
         'layout',
         'reset-email',
+        'billing',
       ],
     ],
     'header-max-length': [2, 'always', 72],
