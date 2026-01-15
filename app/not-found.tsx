@@ -1,7 +1,14 @@
 import { LucideHome } from 'lucide-react';
+import { Metadata } from 'next';
 import Link from 'next/link';
 
 import DefaultLayout from './layouts/default-layout';
+import companyName from './utils/company-name';
+
+export const metadata: Metadata = {
+  title: '404 - Not Found',
+  description: `Page not found. The page you’re looking for doesn’t exist or has moved. Head back to ${companyName} and keep building your Spanish vocabulary.`,
+};
 
 export default function NotFound() {
   return (

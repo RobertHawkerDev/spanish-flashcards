@@ -8,9 +8,12 @@ export default function Header() {
     >
       <div className="flex w-full flex-row items-center justify-between">
         <Link className="flex flex-row items-center text-xl" href="/">
-          <span className="mr-2 text-2xl">🇪🇸</span>
-          <span className="font-bold text-red-700"> Spanish</span>
-          <span className="font-bold text-orange-500">Flashcards</span>
+          <div className="relative mr-1 h-8 w-8">
+            <Image alt="" fill src={'/logo.svg'} />
+          </div>
+
+          <span className="mr-1 font-bold text-[#D90127]">Spanish</span>
+          <span className="font-bold text-orange-400">Flashcards</span>
         </Link>
         <div className="flex flex-row items-center gap-10">
           <Link href="/subscribe">Subscribe</Link>

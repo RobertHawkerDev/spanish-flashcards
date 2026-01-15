@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 
+import companyName from '@/app/utils/company-name';
+
 export const metadata: Metadata = {
-  title: 'Cancel',
-  description:
-    'Your checkout was canceled and no payment was taken. You can return to pricing, review plans, or continue learning with SpanishFlashcards.',
+  title: 'Subcription Canceled',
+  description: `Your checkout was canceled and no payment was taken. You can return to pricing, review plans, or continue learning with ${companyName}.`,
 };
 
 export default function CheckoutCancelPage() {

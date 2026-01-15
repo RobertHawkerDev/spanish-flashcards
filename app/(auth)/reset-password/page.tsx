@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+import companyName from '@/app/utils/company-name';
+
 import SignInForm from './reset-password-form';
 
 export const metadata: Metadata = {
   title: 'Reset Password',
-  description:
-    'Reset your SpanishFlashcards password securely and regain access to your account to continue learning Spanish vocabulary.',
+  description: `Reset your ${companyName} password securely and regain access to your account to continue learning Spanish vocabulary.`,
 };
 
 export default function ResetPasswordPage() {

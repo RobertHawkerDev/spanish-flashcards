@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 
+import companyName from '@/app/utils/company-name';
+
 import ResetEmailForm from './reset-email-form';
 
 export const metadata: Metadata = {
   title: 'Reset Email',
-  description:
-    'Reset or update the email address for your SpanishFlashcards account while keeping your progress and settings.',
+  description: `Reset or update the email address for your ${companyName} account. Keep your progress, settings, and saved learning data.`,
 };
 
 export default function ResetEmailPage() {

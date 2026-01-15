@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+import companyName from '@/app/utils/company-name';
+
 import SignInForm from './sign-up-form';
 
 export const metadata: Metadata = {
   title: 'Sign Up',
-  description:
-    'Sign up to SpanishFlashcards and learn over 3000 everyday Spanish words with interactive flashcards. Improve your vocabulary and track your progress.',
+  description: `Sign up to ${companyName} and learn over 3000 everyday Spanish words with interactive flashcards. Improve your vocabulary and track your progress.`,
 };
 
 export default function SignUpPage() {

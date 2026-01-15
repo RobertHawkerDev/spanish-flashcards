@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
+import companyName from '@/app/utils/company-name';
+
 import ForgotPasswordForm from './forgot-password-form';
 
 export const metadata: Metadata = {
   title: 'Forgot Password',
-  description:
-    'Forgot your password? Recover your SpanishFlashcards account quickly and securely and continue improving your Spanish vocabulary.',
+  description: `Forgot your password? Recover your ${companyName} account quickly and securely and continue improving your Spanish vocabulary.`,
 };
 
 export default function ForgotPasswordPage() {
