@@ -34,7 +34,7 @@ export default async function CollectionPage({
   const collection = words.find(word => word.slug === slug);
 
   if (!collection) {
-    return <p>No Colelction</p>;
+    return <p>No Collection</p>;
   }
 
   return (
