@@ -11,7 +11,7 @@ export default function HomePage() {
       <div className="mt-4 grid grid-cols-1 overflow-hidden rounded-lg sm:mt-10 sm:grid-cols-4 sm:gap-10">
         {decks.map(deck => {
           return (
-            <Link href="/" key={deck.id}>
+            <Link href={`/${deck.slug}`} key={deck.id}>
               <div className="flex flex-row items-start justify-between border-b border-b-neutral-300 bg-white py-4 sm:flex-col sm:rounded-lg sm:border-2 sm:border-black sm:p-6">
                 <div className="flex flex-row items-start gap-8">
                   <div className="relative h-12 w-12 sm:h-24 sm:w-24">

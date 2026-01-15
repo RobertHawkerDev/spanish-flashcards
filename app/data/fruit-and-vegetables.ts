@@ -2,6 +2,7 @@ export const fruitAndVegetables = {
   id: 'fruit-and-vegetables',
   name: 'Fruit & Vegetables',
   slug: 'fruit-and-vegetables',
+  description: 'ddd',
   word_count: 45,
   words: [
     {
