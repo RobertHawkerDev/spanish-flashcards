@@ -1,6 +1,6 @@
 export const fruitAndVegetables = {
   id: 'fruit-and-vegetables',
-  name: 'Fruit & Vegetables',
+  name: 'Fruit and Vegetables',
   slug: 'fruit-and-vegetables',
   description:
     'Learn common fruit and vegetable vocabulary in Spanish, including everyday produce, tropical fruits, leafy greens, and root vegetables.',
