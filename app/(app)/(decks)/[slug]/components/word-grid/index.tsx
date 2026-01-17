@@ -5,6 +5,8 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 
 import WordCard from '../word-card';
 
+type MarkResult = 'correct' | 'wrong';
+
 type Word = {
   id: string | number;
   icon_svg: string;
@@ -76,9 +78,13 @@ function rebuildForColumns(cols: Word[][], nextCols: Columns) {
 export default function CollectionGrid({
   words,
   columns: initialColumns = 4,
+  onMark,
+  onComplete,
 }: {
   words: Word[];
   columns?: Columns;
+  onMark?: (result: MarkResult) => void;
+  onComplete?: () => void;
 }) {
   const containerReference = useRef<HTMLDivElement | null>(null);
 
@@ -142,9 +148,26 @@ export default function CollectionGrid({
     return () => ro.disconnect();
   }, []);
 
-  const handleMark = (id: Word['id']) => {
+  const handleMark = (id: Word['id'], result: MarkResult) => {
     const key = String(id);
-    setColWords(previous => removeFromCurrentColumn(previous, key));
+
+    onMark?.(result);
+
+    setColWords(previous => {
+      const next = removeFromCurrentColumn(previous, key);
+
+      // if no cards left, tell parent (after state updates)
+      const remaining = next.reduce(
+        (accumulator, col) => accumulator + col.length,
+        0,
+      );
+      if (remaining === 0) {
+        // queue after render to avoid setState during render warnings
+        queueMicrotask(() => onComplete?.());
+      }
+
+      return next;
+    });
   };
 
   return (
@@ -160,7 +183,7 @@ export default function CollectionGrid({
               <WordCard
                 key={word.id}
                 word={word}
-                onMark={() => handleMark(word.id)}
+                onMark={result => handleMark(word.id, result)}
               />
             ))}
           </div>

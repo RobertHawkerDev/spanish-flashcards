@@ -36,7 +36,7 @@ export default async function CollectionPage({
   if (!collection) return <p>No Collection</p>;
 
   return (
-    <main className="bg-neutral-50 px-10 py-10">
+    <main className="flex-1 bg-neutral-50 px-10 py-10">
       <DeckClient title={collection.name} words={collection.words} />
     </main>
   );
