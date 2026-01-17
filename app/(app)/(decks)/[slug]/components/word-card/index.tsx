@@ -45,29 +45,24 @@ export default function WordCard({
   return (
     <div
       className={[
-        'h-72 w-full perspective-distant',
+        'relative w-full',
         'transition-all duration-300',
         isLeaving ? 'scale-95 opacity-0' : 'scale-100 opacity-100',
       ].join(' ')}
     >
-      <div
-        role="button"
-        tabIndex={0}
-        aria-label={`Flashcard for ${word.english}`}
-        onClick={() => !isLeaving && setIsFlipped(v => !v)}
-        onKeyDown={event => {
-          if (isLeaving) return;
-          if (event.key === 'Enter' || event.key === ' ') {
-            event.preventDefault();
-            setIsFlipped(v => !v);
-          }
-        }}
+      {/* CARD (tap anywhere to flip) */}
+      <button
+        type="button"
+        disabled={isLeaving}
+        onClick={() => setIsFlipped(v => !v)}
         className={[
-          'relative h-full w-full cursor-pointer rounded-xl border-2 border-black bg-white',
+          'relative h-72 w-full cursor-pointer rounded-xl border-2 border-black bg-white',
+          'perspective-distant',
           'transition-transform duration-500 transform-3d',
           isFlipped ? 'transform-[rotateY(180deg)]' : '',
           isLeaving ? 'pointer-events-none' : '',
         ].join(' ')}
+        aria-label={`Flashcard for ${word.english}`}
       >
         {/* FRONT */}
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 p-8 backface-hidden">
@@ -84,53 +79,53 @@ export default function WordCard({
           <p className="mt-6 text-center text-xl font-semibold select-none">
             {word.english}
           </p>
+          <p className="text-center text-sm text-neutral-500 select-none">
+            Tap to reveal
+          </p>
         </div>
 
-        {/* BACK */}
-        <div className="absolute inset-0 flex transform-[rotateY(180deg)] flex-col items-center justify-center gap-6 p-8 backface-hidden">
+        {/* BACK (text only, no buttons inside 3D!) */}
+        <div className="absolute inset-0 flex transform-[rotateY(180deg)] flex-col items-center justify-center gap-3 p-8 backface-hidden">
+          <p className="text-center text-3xl font-semibold select-none">
+            {spanishFull}
+          </p>
+          <p className="text-center text-sm text-neutral-500 select-none">
+            Tap to flip back
+          </p>
+        </div>
+      </button>
+
+      {/* CONTROLS: outside the 3D transform (reliable taps) */}
+      {isFlipped ? (
+        <div className="mt-4 flex items-center justify-center gap-5">
           <button
             className="cursor-pointer rounded-full bg-neutral-200 p-3 hover:bg-neutral-300"
             type="button"
-            onClick={event => {
-              event.stopPropagation();
-              speak();
-            }}
+            onClick={speak}
             aria-label={`Listen to pronunciation of ${word.spanish}`}
           >
             <LucideMic className="h-8 w-8 text-neutral-900" />
           </button>
 
-          <p className="text-center text-2xl font-semibold select-none">
-            {spanishFull}
-          </p>
+          <button
+            className="cursor-pointer rounded-full bg-red-500 p-3 hover:bg-red-600"
+            type="button"
+            onClick={() => markAndExit('wrong')}
+            aria-label="Mark wrong"
+          >
+            <LucideX className="h-8 w-8 text-white" />
+          </button>
 
-          <div className="mt-2 flex gap-5">
-            <button
-              className="cursor-pointer rounded-full bg-red-500 p-2 hover:bg-red-600"
-              type="button"
-              onClick={event => {
-                event.stopPropagation();
-                markAndExit('wrong');
-              }}
-              aria-label="Mark wrong"
-            >
-              <LucideX className="h-8 w-8 text-white" />
-            </button>
-
-            <button
-              className="cursor-pointer rounded-full bg-green-500 p-2 hover:bg-green-600"
-              type="button"
-              onClick={event => {
-                event.stopPropagation();
-                markAndExit('correct');
-              }}
-              aria-label="Mark correct"
-            >
-              <LucideCheck className="h-8 w-8 text-white" />
-            </button>
-          </div>
+          <button
+            className="cursor-pointer rounded-full bg-green-500 p-3 hover:bg-green-600"
+            type="button"
+            onClick={() => markAndExit('correct')}
+            aria-label="Mark correct"
+          >
+            <LucideCheck className="h-8 w-8 text-white" />
+          </button>
         </div>
-      </div>
+      ) : undefined}
     </div>
   );
 }

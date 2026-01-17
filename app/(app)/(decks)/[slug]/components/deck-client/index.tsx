@@ -3,6 +3,7 @@
 import { LucideRotateCcw, LucideX } from 'lucide-react';
 import { useMemo, useState } from 'react';
 
+import WordDeck from '../word-deck';
 import CollectionGrid from '../word-grid';
 
 type Word = {
@@ -58,12 +59,24 @@ export default function DeckClient({
         </button>
       </div>
 
-      <CollectionGrid
-        key={resetKey}
-        words={words}
-        onMark={handleMark}
-        onComplete={() => setIsDone(true)}
-      />
+      <div className="block md:hidden">
+        <WordDeck
+          key={resetKey}
+          words={words}
+          onMark={handleMark}
+          onComplete={() => setIsDone(true)}
+        />
+      </div>
+
+      {/* Desktop: grid */}
+      <div className="hidden md:block">
+        <CollectionGrid
+          key={resetKey}
+          words={words}
+          onMark={handleMark}
+          onComplete={() => setIsDone(true)}
+        />
+      </div>
 
       {/* Modal */}
       {isDone ? (
