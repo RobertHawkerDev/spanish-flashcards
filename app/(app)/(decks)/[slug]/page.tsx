@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import { words } from '@/app/data/words';
 import companyName from '@/app/utils/company-name';
 
-import CollectionGrid from './components/word-grid';
+import DeckClient from './components/deck-client';
 
 export async function generateMetadata({
   params,
@@ -33,16 +33,11 @@ export default async function CollectionPage({
 
   const collection = words.find(word => word.slug === slug);
 
-  if (!collection) {
-    return <p>No Collection</p>;
-  }
+  if (!collection) return <p>No Collection</p>;
 
   return (
     <main className="bg-neutral-50 px-10 py-10">
-      <div>
-        <h1 className="text-2xl font-bold">{collection.name}</h1>
-      </div>
-      <CollectionGrid words={collection.words} />
+      <DeckClient title={collection.name} words={collection.words} />
     </main>
   );
 }
