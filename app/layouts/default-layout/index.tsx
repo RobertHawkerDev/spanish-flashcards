@@ -1,4 +1,3 @@
-import Footer from '../footer';
 import Header from '../header';
 
 export default function DefaultLayout({
@@ -10,7 +9,7 @@ export default function DefaultLayout({
     <div className="flex min-h-dvh w-full flex-col">
       <Header />
       <div className="flex w-full flex-1 flex-col">{children}</div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
