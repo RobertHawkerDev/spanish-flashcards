@@ -16,11 +16,7 @@ export default function WordCard({
   return (
     <div className="flex flex-col items-center rounded-lg border-2 border-black p-10">
       <div className="relative h-24 w-24">
-        <Image
-          alt=""
-          src={`/words/fruit-and-vegetables/${word.icon_svg}`}
-          fill
-        />
+        <Image alt="" src={`/words/${word.icon_svg}`} fill />
       </div>
       <p>{word.english}</p>
       <p>

@@ -6,8 +6,8 @@ import { decks } from '../data/decks';
 
 export default function HomePage() {
   return (
-    <main className="bg-neutral-50 p-4 sm:p-10">
-      <h1 className="text-2xl font-bold">Flashcard Decks</h1>
+    <main className="flex-1 bg-neutral-50 p-4 sm:p-10">
+      <h1 className="text-center text-2xl font-bold">Learn Spanish By Topic</h1>
       <div className="mt-4 grid grid-cols-1 overflow-hidden rounded-lg sm:mt-10 sm:grid-cols-4 sm:gap-10">
         {decks.map(deck => {
           return (
