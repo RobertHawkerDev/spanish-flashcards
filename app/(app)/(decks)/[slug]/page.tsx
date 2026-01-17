@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import { words } from '@/app/data/words';
 import companyName from '@/app/utils/company-name';
 
-import WordCard from './components/word-card';
+import CollectionGrid from './components/word-grid';
 
 export async function generateMetadata({
   params,
@@ -38,15 +38,11 @@ export default async function CollectionPage({
   }
 
   return (
-    <main className="px-10 py-10">
+    <main className="bg-neutral-50 px-10 py-10">
       <div>
         <h1 className="text-2xl font-bold">{collection.name}</h1>
       </div>
-      <div className="mt-10 grid grid-cols-4 gap-10">
-        {collection.words.map(word => {
-          return <WordCard key={word.id} word={word} />;
-        })}
-      </div>
+      <CollectionGrid words={collection.words} />
     </main>
   );
 }
