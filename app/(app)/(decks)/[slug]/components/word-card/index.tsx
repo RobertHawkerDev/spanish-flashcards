@@ -76,11 +76,12 @@ export default function WordCard({
               alt={word.english}
               src={`/words/${word.icon_svg}`}
               fill
-              className="object-contain"
+              className="pointer-events-none select-none"
               sizes="96px"
+              draggable={false}
             />
           </div>
-          <p className="mt-6 text-center text-xl font-semibold">
+          <p className="mt-6 text-center text-xl font-semibold select-none">
             {word.english}
           </p>
         </div>
@@ -99,7 +100,9 @@ export default function WordCard({
             <LucideMic className="h-8 w-8 text-neutral-900" />
           </button>
 
-          <p className="text-center text-2xl font-semibold">{spanishFull}</p>
+          <p className="text-center text-2xl font-semibold select-none">
+            {spanishFull}
+          </p>
 
           <div className="mt-2 flex gap-5">
             <button
