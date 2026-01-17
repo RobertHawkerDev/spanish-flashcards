@@ -2,9 +2,11 @@ export const humanBody = {
   id: 'human-body',
   name: 'Human Body',
   slug: 'human-body',
+  icon_png: '/decks/human-body.png',
+  icon_svg: '/decks/human-body.svg',
   description:
     'Learn common human body vocabulary in Spanish, including external body parts, internal organs, and anatomy-related terms.',
-  word_count: 60,
+  word_count: 54,
   words: [
     {
       id: 1,

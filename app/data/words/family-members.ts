@@ -2,6 +2,8 @@ export const familyMembers = {
   id: 'family-members',
   name: 'Family Members',
   slug: 'family-members',
+  icon_png: '/decks/family-members.png',
+  icon_svg: '/decks/family-members.svg',
   description:
     'Learn common family and relationship vocabulary in Spanish, including relatives, partners, and family roles across generations.',
   word_count: 54,

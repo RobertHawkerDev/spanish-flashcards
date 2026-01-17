@@ -1,74 +1,19 @@
+import { animals } from './words/animals';
+import { bathroom } from './words/bathroom';
+import { clothes } from './words/clothes';
+import { familyMembers } from './words/family-members';
+import { fruitAndVegetables } from './words/fruit-and-vegetables';
+import { humanBody } from './words/human-body';
+import { kitchen } from './words/kitchen';
+import { musicalInstruments } from './words/musical-instruments';
+
 export const decks = [
-  {
-    id: '1',
-    name: 'Animals',
-    slug: 'animals',
-    icon_png: '/decks/animals.png',
-    icon_svg: '/decks/animals.svg',
-    word_count: 50,
-    premium: false,
-  },
-  {
-    id: '2',
-    name: 'Fruit and Vegetables',
-    slug: 'fruit-and-vegetables',
-    icon_png: '/decks/fruit-and-vegetables.png',
-    icon_svg: '/decks/fruit-and-vegetables.svg',
-    word_count: 50,
-    premium: false,
-  },
-  {
-    id: '3',
-    name: 'Kitchen',
-    slug: 'kitchen',
-    icon_png: '/decks/kitchen.png',
-    icon_svg: '/decks/kitchen.svg',
-    word_count: 50,
-    premium: false,
-  },
-  {
-    id: '4',
-    name: 'Human Body',
-    slug: 'human-body',
-    icon_png: '/decks/human-body.png',
-    icon_svg: '/decks/human-body.svg',
-    word_count: 50,
-    premium: false,
-  },
-  {
-    id: '5',
-    name: 'Family Members',
-    slug: 'family-members',
-    icon_png: '/decks/family-members.png',
-    icon_svg: '/decks/family-members.svg',
-    word_count: 50,
-    premium: false,
-  },
-  {
-    id: '6',
-    name: 'Clothes',
-    slug: 'clothes',
-    icon_png: '/decks/clothes.png',
-    icon_svg: '/decks/clothes.svg',
-    word_count: 50,
-    premium: false,
-  },
-  {
-    id: '7',
-    name: 'Bathroom',
-    slug: 'bathroom',
-    icon_png: '/decks/bathroom.png',
-    icon_svg: '/decks/bathroom.svg',
-    word_count: 50,
-    premium: false,
-  },
-  {
-    id: '8',
-    name: 'Musical Instruments',
-    slug: 'musical-instruments',
-    icon_png: '/decks/musical-instruments.png',
-    icon_svg: '/decks/musical-instruments.svg',
-    word_count: 50,
-    premium: false,
-  },
+  animals,
+  bathroom,
+  clothes,
+  familyMembers,
+  fruitAndVegetables,
+  humanBody,
+  kitchen,
+  musicalInstruments,
 ];

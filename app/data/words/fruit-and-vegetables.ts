@@ -2,9 +2,11 @@ export const fruitAndVegetables = {
   id: 'fruit-and-vegetables',
   name: 'Fruit and Vegetables',
   slug: 'fruit-and-vegetables',
+  icon_png: '/decks/fruit-and-vegetables.png',
+  icon_svg: '/decks/fruit-and-vegetables.svg',
   description:
     'Learn common fruit and vegetable vocabulary in Spanish, including everyday produce, tropical fruits, leafy greens, and root vegetables.',
-  word_count: 78,
+  word_count: 77,
   words: [
     {
       id: 1,

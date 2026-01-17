@@ -2,9 +2,11 @@ export const bathroom = {
   id: 'bathroom',
   name: 'Bathroom',
   slug: 'bathroom',
+  icon_png: '/decks/bathroom.png',
+  icon_svg: '/decks/bathroom.svg',
   description:
     'Learn common bathroom and personal care vocabulary in Spanish, including everyday items, toiletries, and fixtures used at home and in public restrooms.',
-  word_count: 50,
+  word_count: 46,
   words: [
     {
       id: 1,

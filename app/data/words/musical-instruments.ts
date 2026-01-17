@@ -2,9 +2,11 @@ export const musicalInstruments = {
   id: 'musical-instruments',
   name: 'Musical Instruments',
   slug: 'musical-instruments',
+  icon_png: '/decks/musical-instruments.png',
+  icon_svg: '/decks/musical-instruments.svg',
   description:
     'Learn common musical instrument vocabulary in Spanish, including string, wind, percussion, and electronic instruments from around the world.',
-  word_count: 90,
+  word_count: 66,
   words: [
     {
       id: 1,

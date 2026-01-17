@@ -2,6 +2,8 @@ export const animals = {
   id: 'animals',
   name: 'Animals',
   slug: 'animals',
+  icon_png: '/decks/animals.png',
+  icon_svg: '/decks/animals.svg',
   description:
     'Learn common animal vocabulary in Spanish, including domestic animals, wild animals, birds, sea creatures, and insects.',
   word_count: 60,
