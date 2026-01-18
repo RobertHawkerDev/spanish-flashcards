@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import { words } from '@/app/data/words';
 import companyName from '@/app/utils/company-name';
 
-import WordCard from './word-card';
+import DeckClient from './deck-client';
 
 export async function generateMetadata({
   params,
@@ -38,11 +38,7 @@ export default async function DeckPage({
   return (
     <main className="flex flex-1 flex-col bg-neutral-50 px-10">
       <h1>{collection.name}</h1>
-      <div>
-        {collection.words.map(word => (
-          <WordCard key={word.id} word={word} />
-        ))}
-      </div>
+      <DeckClient words={collection.words} flip="horizontal" />
     </main>
   );
 }
