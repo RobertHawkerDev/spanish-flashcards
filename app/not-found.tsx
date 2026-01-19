@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <DefaultLayout>
-      <div className="flex flex-col items-center px-5 py-10 md:py-12">
+      <main className="flex flex-col items-center px-5 py-10 md:py-12">
         <h1 className="text-center text-3xl font-bold sm:text-5xl">
           404 - Not Found
         </h1>
@@ -27,7 +27,7 @@ export default function NotFound() {
           <LucideHome size={20} />
           <p className="ml-2">Home</p>
         </Link>
-      </div>
+      </main>
     </DefaultLayout>
   );
 }
