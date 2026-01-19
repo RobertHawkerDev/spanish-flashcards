@@ -36,9 +36,12 @@ export default async function DeckPage({
   if (!collection) return <p>No Collection</p>;
 
   return (
-    <main className="flex flex-1 flex-col bg-neutral-50 px-10">
-      <h1>{collection.name}</h1>
-      <DeckClient words={collection.words} flip="horizontal" />
+    <main className="flex flex-1 flex-col items-center bg-neutral-50 py-7">
+      <DeckClient
+        title={collection.name}
+        words={collection.words}
+        flip="vertical"
+      />
     </main>
   );
 }

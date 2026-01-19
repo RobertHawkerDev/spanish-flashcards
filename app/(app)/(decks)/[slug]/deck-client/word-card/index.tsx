@@ -31,7 +31,7 @@ export default function WordCard({
       : 'transform-[rotateX(180deg)]';
 
   return (
-    <div className="size-96 hover:cursor-pointer">
+    <div className="size-96 w-full hover:cursor-pointer">
       <div className="size-full perspective-[1000px]">
         <div
           className={clsx(
@@ -48,14 +48,14 @@ export default function WordCard({
           {/* FRONT */}
           <div className="absolute inset-0 backface-hidden">
             <div className="flex h-full w-full flex-col items-center justify-center">
-              <div className="relative size-32">
+              <div className="relative size-40">
                 <Image
                   src={`/words/${word.icon_svg}`}
                   fill
                   alt={word.english}
                 />
               </div>
-              <h2 className="mt-4 text-2xl font-semibold">{word.english}</h2>
+              <h2 className="mt-8 text-2xl font-semibold">{word.english}</h2>
             </div>
           </div>
 
