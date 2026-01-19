@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 
 import { words } from '@/app/data/words';
 import companyName from '@/app/utils/company-name';
@@ -33,15 +34,11 @@ export default async function DeckPage({
 
   const collection = words.find(word => word.slug === slug);
 
-  if (!collection) return <p>No Collection</p>;
+  if (!collection) return notFound();
 
   return (
-    <main className="flex flex-1 flex-col items-center bg-neutral-50 py-7">
-      <DeckClient
-        title={collection.name}
-        words={collection.words}
-        flip="vertical"
-      />
+    <main className="flex-1 bg-neutral-100">
+      <DeckClient title={collection.name} words={collection.words} />
     </main>
   );
 }

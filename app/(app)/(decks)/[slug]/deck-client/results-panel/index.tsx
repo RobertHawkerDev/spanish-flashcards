@@ -1,20 +1,5 @@
 import { RotateCcw } from 'lucide-react';
 
-function ResultRow({
-  label,
-  value,
-}: {
-  label: string;
-  value: React.ReactNode;
-}) {
-  return (
-    <div className="flex items-center justify-between rounded-lg border bg-neutral-50 px-4 py-3">
-      <span>{label}</span>
-      <span className="font-semibold">{value}</span>
-    </div>
-  );
-}
-
 export default function ResultsPanel({
   correct,
   wrong,
@@ -29,27 +14,31 @@ export default function ResultsPanel({
   onRestart: () => void;
 }) {
   return (
-    <section className="mx-auto flex w-full max-w-md flex-col items-center gap-6 rounded-xl border bg-white p-6">
-      <h2 className="text-2xl font-bold">Results</h2>
-
+    <section className="mx-auto mt-14 flex w-full max-w-md flex-col items-center gap-6 rounded-xl border border-neutral-400 bg-white p-9">
       <div className="text-center">
-        <p className="text-lg font-semibold">{feedback.title}</p>
-        <p className="mt-1 text-sm text-neutral-600">{feedback.message}</p>
+        <h2 className="text-3xl font-bold">{percentage}%</h2>
+        <p className="mt-3 text-base text-neutral-600">{feedback.message}</p>
       </div>
 
-      <div className="flex w-full flex-col gap-3 text-sm">
-        <ResultRow label="✅ Correct" value={correct} />
-        <ResultRow label="❌ Wrong" value={wrong} />
-        <ResultRow label="📈 Score" value={`${percentage}%`} />
+      <div className="mt-4 flex w-full flex-row gap-4 text-sm">
+        <div className="flex flex-1 flex-col items-center justify-between rounded-lg border-2 bg-neutral-100 px-4 py-5">
+          <span className="text-lg font-semibold">Correct</span>
+          <span className="mt-3 text-3xl font-semibold">{correct}</span>
+        </div>
+
+        <div className="flex flex-1 flex-col items-center justify-between rounded-lg border-2 bg-neutral-100 px-4 py-5">
+          <span className="text-lg font-semibold">Incorrect</span>
+          <span className="mt-3 text-3xl font-semibold">{wrong}</span>
+        </div>
       </div>
 
       <button
         type="button"
         onClick={onRestart}
-        className="mt-2 inline-flex items-center gap-2 rounded-lg border bg-white px-4 py-2 text-sm font-medium hover:bg-neutral-50"
+        className="mt-3 flex min-w-48 items-center justify-center gap-2 rounded-full border bg-black px-4 py-4 text-sm font-semibold text-white hover:cursor-pointer hover:bg-neutral-700"
       >
-        <RotateCcw size={18} />
-        Restart
+        <RotateCcw size={20} />
+        <span className="text-base">Restart</span>
       </button>
     </section>
   );

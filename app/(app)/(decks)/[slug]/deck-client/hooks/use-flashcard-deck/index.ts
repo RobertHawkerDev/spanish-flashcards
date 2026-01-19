@@ -4,7 +4,6 @@ import { useMemo, useState } from 'react';
 
 import type IWord from '@/app/interface/word';
 
-export type FlipDirection = 'horizontal' | 'vertical';
 export type Answer = 'correct' | 'wrong';
 
 type HistoryAction = {
@@ -47,8 +46,6 @@ export function useFlashcardDeck(words: IWord[]) {
   const [history, setHistory] = useState<HistoryAction[]>([]);
   const [hasUsedPrevious, setHasUsedPrevious] = useState(false);
   const [answeredCount, setAnsweredCount] = useState(0);
-
-  const [restartModalOpen, setRestartModalOpen] = useState(false);
 
   const safeIndex = total === 0 ? 0 : Math.min(index, total - 1);
 
@@ -139,18 +136,6 @@ export function useFlashcardDeck(words: IWord[]) {
     setAnsweredCount(0);
   }
 
-  // Modal helpers
-  function openRestartModal() {
-    setRestartModalOpen(true);
-  }
-  function closeRestartModal() {
-    setRestartModalOpen(false);
-  }
-  function confirmRestart() {
-    restart();
-    setRestartModalOpen(false);
-  }
-
   return {
     // view/state
     total,
@@ -175,12 +160,7 @@ export function useFlashcardDeck(words: IWord[]) {
       wrong: () => grade('wrong'),
       correct: () => grade('correct'),
       previous,
-      openRestartModal,
-      closeRestartModal,
-      confirmRestart,
+      restart,
     },
-
-    // modal state
-    restartModalOpen,
   };
 }
