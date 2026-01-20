@@ -14,7 +14,7 @@ export default function ResultsPanel({
   onRestart: () => void;
 }) {
   return (
-    <section className="mx-auto mt-14 flex w-full max-w-md flex-col items-center gap-6 rounded-xl border border-neutral-400 bg-white p-9">
+    <section className="mx-auto mt-10 flex w-full max-w-3xl flex-col items-center gap-6 rounded-xl border border-neutral-400 bg-white p-9">
       <div className="text-center">
         <h2 className="text-3xl font-bold">{percentage}%</h2>
         <p className="mt-3 text-base text-neutral-600">{feedback.message}</p>

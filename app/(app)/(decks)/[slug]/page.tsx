@@ -37,7 +37,7 @@ export default async function DeckPage({
   if (!collection) return notFound();
 
   return (
-    <main className="flex-1 bg-neutral-100">
+    <main className="px-6">
       <DeckClient title={collection.name} words={collection.words} />
     </main>
   );

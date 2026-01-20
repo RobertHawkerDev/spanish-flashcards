@@ -7,7 +7,7 @@ import companyName from '../utils/company-name';
 
 export default function HomePage() {
   return (
-    <main className="flex flex-1 flex-col bg-neutral-100 p-4 sm:p-10 sm:py-8">
+    <main className="flex flex-1 flex-col bg-neutral-100 p-4 px-6 sm:p-10 sm:py-8">
       <div className="flex-1">
         <h1 className="mt-2 text-lg font-bold sm:mt-0 sm:text-2xl">
           Learn Spanish with Flashcards

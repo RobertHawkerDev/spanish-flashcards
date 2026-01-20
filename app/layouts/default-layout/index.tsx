@@ -6,9 +6,11 @@ export default function DefaultLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex min-h-dvh w-full flex-col">
+    <div className="flex min-h-dvh w-full flex-col bg-neutral-100">
       <Header />
-      <div className="flex w-full flex-1 flex-col">{children}</div>
+      <div className="flex w-full flex-1 flex-col overflow-y-auto pb-[calc(env(safe-area-inset-bottom)+6rem)] md:pb-0">
+        {children}
+      </div>
     </div>
   );
 }

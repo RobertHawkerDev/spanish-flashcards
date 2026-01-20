@@ -33,19 +33,24 @@ export default function WordCard({ word }: { word: IWord }) {
         >
           {/* FRONT */}
           <div className="absolute inset-0 backface-hidden">
-            <div className="flex h-full w-full flex-col items-center justify-center">
-              <div className="relative size-32 sm:size-40">
-                <Image
-                  src={`/words/${word.icon_svg}`}
-                  fill
-                  alt={word.english}
-                />
+            <div className="flex h-full w-full flex-col items-center justify-start pt-10 sm:pt-12">
+              {/* fixed slot so front/back align */}
+              <div className="flex h-36 items-center justify-center">
+                <div className="relative size-32 sm:size-36">
+                  <Image
+                    src={`/words/${word.icon_svg}`}
+                    fill
+                    alt={word.english}
+                  />
+                </div>
               </div>
-              <h2 className="mt-10 text-center text-2xl font-semibold">
+
+              <p className="mt-7 text-center text-2xl font-semibold sm:text-3xl">
                 {word.english}
-              </h2>
+              </p>
             </div>
           </div>
+
           {/* BACK */}
           <div
             className={clsx(
@@ -53,19 +58,22 @@ export default function WordCard({ word }: { word: IWord }) {
               backFaceRotation,
             )}
           >
-            <div className="flex h-full w-full flex-col items-center justify-start">
-              <button
-                type="button"
-                className="mt-24 flex items-center justify-center rounded-full bg-neutral-200 p-4 text-black hover:cursor-pointer hover:bg-neutral-300"
-                onClick={event => {
-                  event.stopPropagation();
-                  handleWordPronunciation(event, word);
-                }}
-              >
-                <LucideVolume2 size={24} />
-              </button>
+            <div className="flex h-full w-full flex-col items-center justify-start pt-10 sm:pt-12">
+              {/* same fixed slot as the image */}
+              <div className="flex h-36 items-center justify-center sm:h-36">
+                <button
+                  type="button"
+                  className="flex items-center justify-center rounded-full bg-neutral-200 p-5 text-black hover:bg-neutral-300"
+                  onClick={event => {
+                    event.stopPropagation();
+                    handleWordPronunciation(event, word);
+                  }}
+                >
+                  <LucideVolume2 size={24} />
+                </button>
+              </div>
 
-              <p className="mt-10 text-3xl font-semibold">
+              <p className="text-center text-2xl font-semibold sm:text-3xl">
                 {word.spanish_article} {word.spanish}
               </p>
             </div>
