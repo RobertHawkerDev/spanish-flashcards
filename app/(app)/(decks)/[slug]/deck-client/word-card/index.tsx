@@ -41,11 +41,13 @@ export default function WordCard({ word }: { word: IWord }) {
                     src={`/words/${word.icon_svg}`}
                     fill
                     alt={word.english}
+                    className="pointer-events-none select-none"
+                    draggable={false}
                   />
                 </div>
               </div>
 
-              <p className="mt-7 text-center text-2xl font-semibold sm:text-3xl">
+              <p className="pointer-events-none mt-7 text-center text-2xl font-semibold select-none sm:text-3xl">
                 {word.english}
               </p>
             </div>
@@ -73,7 +75,7 @@ export default function WordCard({ word }: { word: IWord }) {
                 </button>
               </div>
 
-              <p className="text-center text-2xl font-semibold sm:text-3xl">
+              <p className="pointer-events-none text-center text-2xl font-semibold select-none sm:text-3xl">
                 {word.spanish_article} {word.spanish}
               </p>
             </div>

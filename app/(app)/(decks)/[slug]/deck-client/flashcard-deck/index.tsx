@@ -46,7 +46,9 @@ export default function FlashcardDeck({
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-500 text-white">
                 <LucideX />
               </span>
-              <span className="text-base font-semibold">Incorrect</span>
+              <span className="pointer-events-none text-base font-semibold select-none">
+                Incorrect
+              </span>
             </button>
 
             <button
@@ -57,7 +59,9 @@ export default function FlashcardDeck({
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-green-500 text-white">
                 <LucideCheck />
               </span>
-              <span className="text-base font-semibold">Correct</span>
+              <span className="pointer-events-none text-base font-semibold select-none">
+                Correct
+              </span>
             </button>
           </div>
         </div>
