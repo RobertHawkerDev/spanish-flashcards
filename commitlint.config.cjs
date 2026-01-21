@@ -49,6 +49,7 @@ module.exports = {
         'deck',
         'icon',
         'package-install',
+        'analytics',
       ],
     ],
     'header-max-length': [2, 'always', 72],
