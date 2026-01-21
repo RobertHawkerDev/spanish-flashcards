@@ -38,7 +38,11 @@ export default async function DeckPage({
 
   return (
     <main className="px-6">
-      <DeckClient title={collection.name} words={collection.words} />
+      <DeckClient
+        title={collection.name}
+        slug={slug}
+        words={collection.words}
+      />
     </main>
   );
 }

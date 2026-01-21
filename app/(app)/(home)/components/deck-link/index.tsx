@@ -18,11 +18,12 @@ export default function DeckLink({
     <Link
       href={`/${deck.slug}`}
       onClick={() => {
-        track('deck_opened', {
-          slug: deck.slug,
-          name: deck.name,
+        const payload = {
+          deck_slug: deck.slug,
           word_count: deck.word_count,
-        });
+        };
+
+        track('deck_opened', payload);
       }}
     >
       <div

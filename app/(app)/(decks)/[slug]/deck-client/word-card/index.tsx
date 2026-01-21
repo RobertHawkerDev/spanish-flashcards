@@ -1,20 +1,49 @@
 'use client';
 
+import { track } from '@vercel/analytics';
 import clsx from 'clsx';
 import { LucideVolume2 } from 'lucide-react';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 import IWord from '@/app/interface/word';
 
 import handleWordPronunciation from './handle-pronunciation';
 
-export default function WordCard({ word }: { word: IWord }) {
+export default function WordCard({
+  word,
+  deckSlug,
+  cardIndex,
+  onFirstFlip,
+}: {
+  word: IWord;
+  deckSlug: string;
+  cardIndex: number;
+  onFirstFlip?: (cardIndex: number) => void;
+}) {
   const [flipped, setFlipped] = useState(false);
 
-  const containerRotation = 'transform-[rotateX(180deg)]';
+  const hasTrackedFlip = useRef(false);
 
+  const containerRotation = 'transform-[rotateX(180deg)]';
   const backFaceRotation = 'transform-[rotateX(180deg)]';
+
+  const flipToBack = () => {
+    if (!flipped && !hasTrackedFlip.current) {
+      if (process.env.NODE_ENV === 'development') {
+        console.log('EVENT card_flipped', {
+          deck_slug: deckSlug,
+          card_index: cardIndex,
+        });
+      }
+      track('card_flipped', { deck_slug: deckSlug, card_index: cardIndex });
+
+      hasTrackedFlip.current = true;
+      onFirstFlip?.(cardIndex);
+    }
+
+    setFlipped(v => !v);
+  };
 
   return (
     <div className="mb-6 flex w-full items-center justify-center">
@@ -24,17 +53,19 @@ export default function WordCard({ word }: { word: IWord }) {
             'relative flex size-full h-80 w-full items-center justify-center rounded-xl border-2 bg-white text-black transition-transform duration-500 transform-3d hover:cursor-pointer sm:h-96',
             flipped && containerRotation,
           )}
-          onClick={() => setFlipped(v => !v)}
+          onClick={flipToBack}
           role="button"
           tabIndex={0}
           onKeyDown={event => {
-            if (event.key === 'Enter' || event.key === ' ') setFlipped(v => !v);
+            if (event.key === 'Enter' || event.key === ' ') {
+              event.preventDefault();
+              flipToBack();
+            }
           }}
         >
           {/* FRONT */}
           <div className="absolute inset-0 backface-hidden">
             <div className="flex h-full w-full flex-col items-center justify-start pt-10 sm:pt-12">
-              {/* fixed slot so front/back align */}
               <div className="flex h-36 items-center justify-center">
                 <div className="relative size-32 sm:size-36">
                   <Image
@@ -61,7 +92,6 @@ export default function WordCard({ word }: { word: IWord }) {
             )}
           >
             <div className="flex h-full w-full flex-col items-center justify-start pt-10 sm:pt-12">
-              {/* same fixed slot as the image */}
               <div className="flex h-36 items-center justify-center sm:h-36">
                 <button
                   type="button"
