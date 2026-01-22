@@ -2,6 +2,7 @@
 
 import { track } from '@vercel/analytics';
 import { LucideCheck, LucideX } from 'lucide-react';
+import Link from 'next/link';
 import { useRef } from 'react';
 
 import IWord from '@/app/interface/word';
@@ -45,16 +46,24 @@ export default function FlashcardDeck({
   };
 
   return (
-    <div className="flex flex-1 flex-col items-center py-6">
+    <div className="flex flex-1 flex-col items-center py-7">
       <div className="w-full max-w-4xl">
-        {/* Heading */}
-        <div className="mb-5 flex flex-col items-center">
-          <h1 className="text-xl font-semibold tracking-tight">{title}</h1>
-          <p className="mt-1 text-sm font-medium text-neutral-800">
-            {current}
-            <span className="mx-1 text-neutral-800">/</span>
-            {total}
-          </p>
+        <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <h1 className="text-2xl font-semibold tracking-tight text-black">
+            {title}
+          </h1>
+          <div className="flex flex-row items-center gap-2.5">
+            <p className="text-lg font-semibold">
+              {current} / {total}
+            </p>
+            <p>·</p>
+            <Link
+              href={`${deckSlug}/words`}
+              className="text-base font-semibold text-neutral-800 hover:underline"
+            >
+              View all words
+            </Link>
+          </div>
         </div>
 
         {/* Card */}
@@ -67,12 +76,12 @@ export default function FlashcardDeck({
         />
 
         {/* Actions */}
-        <div className="flex flex-col gap-4">
-          <div className="flex w-full gap-3">
+        <div className="mt-7 flex flex-col gap-4">
+          <div className="flex w-full justify-center gap-3">
             <button
               type="button"
               onClick={() => handleAnswer(false)}
-              className="flex flex-1 items-center justify-center gap-3 rounded-xl border-2 border-black bg-white py-4 transition hover:cursor-pointer hover:bg-red-50 active:scale-[0.98]"
+              className="flex flex-1 items-center justify-center gap-3 rounded-xl border-[1.5px] border-neutral-600 bg-white py-4 transition hover:cursor-pointer hover:bg-red-50 active:scale-[0.98]"
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-500 text-white">
                 <LucideX />
@@ -85,7 +94,7 @@ export default function FlashcardDeck({
             <button
               type="button"
               onClick={() => handleAnswer(true)}
-              className="flex flex-1 items-center justify-center gap-3 rounded-xl border-2 border-black bg-white py-4 transition hover:cursor-pointer hover:bg-green-50 active:scale-[0.98]"
+              className="flex flex-1 items-center justify-center gap-3 rounded-xl border-[1.5px] border-neutral-600 bg-white py-4 transition hover:cursor-pointer hover:bg-green-50 active:scale-[0.98]"
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-green-500 text-white">
                 <LucideCheck />

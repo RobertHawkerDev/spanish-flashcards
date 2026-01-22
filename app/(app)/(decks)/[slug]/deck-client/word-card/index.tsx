@@ -46,11 +46,11 @@ export default function WordCard({
   };
 
   return (
-    <div className="mb-6 flex w-full items-center justify-center">
+    <div className="flex w-full items-center justify-center">
       <div className="size-full perspective-[1000px]">
         <div
           className={clsx(
-            'relative flex size-full h-80 w-full items-center justify-center rounded-xl border-2 bg-white text-black transition-transform duration-500 transform-3d hover:cursor-pointer sm:h-96',
+            'relative flex size-full h-80 w-full items-center justify-center rounded-xl border-[1.5px] border-neutral-600 bg-white text-black transition-transform duration-500 transform-3d hover:cursor-pointer sm:h-96',
             flipped && containerRotation,
           )}
           onClick={flipToBack}
@@ -65,7 +65,7 @@ export default function WordCard({
         >
           {/* FRONT */}
           <div className="absolute inset-0 backface-hidden">
-            <div className="flex h-full w-full flex-col items-center justify-start pt-10 sm:pt-12">
+            <div className="flex h-full w-full flex-col items-center justify-start pt-10 sm:pt-18">
               <div className="flex h-36 items-center justify-center">
                 <div className="relative size-32 sm:size-36">
                   <Image
@@ -78,7 +78,7 @@ export default function WordCard({
                 </div>
               </div>
 
-              <p className="pointer-events-none mt-7 text-center text-2xl font-semibold select-none sm:text-3xl">
+              <p className="pointer-events-none mt-6 text-center text-3xl font-bold select-none sm:text-4xl">
                 {word.english}
               </p>
             </div>
@@ -91,21 +91,19 @@ export default function WordCard({
               backFaceRotation,
             )}
           >
-            <div className="flex h-full w-full flex-col items-center justify-start pt-10 sm:pt-12">
-              <div className="flex h-36 items-center justify-center sm:h-36">
-                <button
-                  type="button"
-                  className="flex items-center justify-center rounded-full bg-neutral-200 p-5 text-black hover:bg-neutral-300"
-                  onClick={event => {
-                    event.stopPropagation();
-                    handleWordPronunciation(event, word);
-                  }}
-                >
-                  <LucideVolume2 size={24} />
-                </button>
-              </div>
+            <div className="flex h-full w-full flex-col items-center justify-start pt-10 sm:pt-16">
+              <button
+                type="button"
+                className="flex items-center justify-center rounded-full p-4 text-black hover:cursor-pointer hover:bg-neutral-200"
+                onClick={event => {
+                  event.stopPropagation();
+                  handleWordPronunciation(event, word);
+                }}
+              >
+                <LucideVolume2 size={24} />
+              </button>
 
-              <p className="pointer-events-none text-center text-2xl font-semibold select-none sm:text-3xl">
+              <p className="pointer-events-none mt-8 text-center text-3xl font-bold select-none sm:text-4xl">
                 {word.spanish_article} {word.spanish}
               </p>
             </div>
