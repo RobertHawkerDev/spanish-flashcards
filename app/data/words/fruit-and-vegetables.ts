@@ -4,8 +4,9 @@ export const fruitAndVegetables = {
   slug: 'fruit-and-vegetables',
   icon_png: '/decks/fruit-and-vegetables.png',
   icon_svg: '/decks/fruit-and-vegetables.svg',
-  description:
-    'Learn common fruit and vegetable vocabulary in Spanish, including everyday produce, tropical fruits, leafy greens, and root vegetables.',
+  seo_title: 'Spanish Fruit and Vegetables Flashcards with Pictures',
+  seo_description:
+    'Practice Spanish fruit and vegetables vocabulary with visual flashcards. Includes everyday produce, tropical fruits, leafy greens, and root vegetables.',
   word_count: 77,
   words: [
     {

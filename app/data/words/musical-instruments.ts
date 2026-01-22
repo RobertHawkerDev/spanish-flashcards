@@ -4,8 +4,9 @@ export const musicalInstruments = {
   slug: 'musical-instruments',
   icon_png: '/decks/musical-instruments.png',
   icon_svg: '/decks/musical-instruments.svg',
-  description:
-    'Learn common musical instrument vocabulary in Spanish, including string, wind, percussion, and electronic instruments from around the world.',
+  seo_title: 'Spanish Musical Instruments Flashcards with Pictures',
+  seo_description:
+    'Practice Spanish musical instruments vocabulary with visual flashcards. Includes string, wind, percussion, and electronic instruments from around the world.',
   word_count: 66,
   words: [
     {

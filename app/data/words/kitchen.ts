@@ -4,8 +4,9 @@ export const kitchen = {
   slug: 'kitchen',
   icon_png: '/decks/kitchen.png',
   icon_svg: '/decks/kitchen.svg',
-  description:
-    'Learn common kitchen vocabulary in Spanish, including appliances, cookware, utensils, and everyday items used for cooking and dining.',
+  seo_title: 'Spanish Kitchen Flashcards with Pictures',
+  seo_description:
+    'Practice Spanish kitchen vocabulary with visual flashcards. Includes appliances, cookware, utensils, and everyday items used for cooking and dining.',
   word_count: 57,
   words: [
     {

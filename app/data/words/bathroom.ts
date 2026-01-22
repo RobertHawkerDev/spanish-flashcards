@@ -4,8 +4,9 @@ export const bathroom = {
   slug: 'bathroom',
   icon_png: '/decks/bathroom.png',
   icon_svg: '/decks/bathroom.svg',
-  description:
-    'Learn common bathroom and personal care vocabulary in Spanish, including everyday items, toiletries, and fixtures used at home and in public restrooms.',
+  seo_title: 'Spanish Bathroom Flashcards with Pictures',
+  seo_description:
+    'Practice Spanish bathroom vocabulary with visual flashcards. Includes common bathroom items, toiletries, and fixtures used at home and in public restrooms.',
   word_count: 46,
   words: [
     {

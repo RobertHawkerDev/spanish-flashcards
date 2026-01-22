@@ -4,8 +4,9 @@ export const animals = {
   slug: 'animals',
   icon_png: '/decks/animals.png',
   icon_svg: '/decks/animals.svg',
-  description:
-    'Learn common animal vocabulary in Spanish, including domestic animals, wild animals, birds, sea creatures, and insects.',
+  seo_title: 'Spanish Animal Flashcards with Pictures',
+  seo_description:
+    'Practice Spanish animal vocabulary with visual flashcards. Includes common animals such as pets, wild animals, birds, sea creatures, and insects.',
   word_count: 60,
   words: [
     {

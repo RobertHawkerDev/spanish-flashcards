@@ -22,7 +22,10 @@ export async function generateMetadata({
     };
   }
 
-  return { title: collection.name, description: collection.description };
+  return {
+    title: collection.seo_title,
+    description: collection.seo_description,
+  };
 }
 
 export default async function DeckPage({

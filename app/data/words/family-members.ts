@@ -4,8 +4,9 @@ export const familyMembers = {
   slug: 'family-members',
   icon_png: '/decks/family-members.png',
   icon_svg: '/decks/family-members.svg',
-  description:
-    'Learn common family and relationship vocabulary in Spanish, including relatives, partners, and family roles across generations.',
+  seo_title: 'Spanish Family Members Flashcards with Pictures',
+  seo_description:
+    'Practice Spanish family members vocabulary with visual flashcards. Includes relatives, partners, and family roles across different generations.',
   word_count: 54,
   words: [
     {

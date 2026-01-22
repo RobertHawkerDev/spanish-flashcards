@@ -4,8 +4,9 @@ export const clothes = {
   slug: 'clothes',
   icon_png: '/decks/clothes.png',
   icon_svg: '/decks/clothes.svg',
-  description:
-    'Learn common clothing, footwear, and accessories vocabulary in Spanish, including everyday wear, formal outfits, and seasonal items.',
+  seo_title: 'Spanish Clothes Flashcards with Pictures',
+  seo_description:
+    'Practice Spanish clothes vocabulary with visual flashcards. Includes common clothing, footwear, and accessories for everyday wear, formal outfits, and seasonal items.',
   word_count: 78,
   words: [
     {

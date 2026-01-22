@@ -5,13 +5,13 @@ import { LucideChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import ICollection from '@/app/interface/collection';
+import IDeck from '@/app/interface/deck';
 
 export default function DeckLink({
   deck,
   isLast,
 }: {
-  deck: ICollection;
+  deck: IDeck;
   isLast: boolean;
 }) {
   return (
