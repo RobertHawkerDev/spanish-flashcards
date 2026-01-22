@@ -71,7 +71,7 @@ export default function WordCard({
                   <Image
                     src={`/words/${word.icon_svg}`}
                     fill
-                    alt={word.english}
+                    alt={`${word.spanish_article} ${word.spanish} — ${word.english}`}
                     className="pointer-events-none select-none"
                     draggable={false}
                   />
