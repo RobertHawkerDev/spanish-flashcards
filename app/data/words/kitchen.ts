@@ -4,6 +4,7 @@ export const kitchen = {
   slug: 'kitchen',
   icon_png: '/decks/kitchen.png',
   icon_svg: '/decks/kitchen.svg',
+  page_title: 'Spanish Kitchen Flashcards',
   seo_title: 'Spanish Kitchen Flashcards with Pictures',
   seo_description:
     'Practice Spanish kitchen vocabulary with visual flashcards. Includes appliances, cookware, utensils, and everyday items used for cooking and dining.',

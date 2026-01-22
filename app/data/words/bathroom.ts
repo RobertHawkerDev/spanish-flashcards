@@ -4,6 +4,7 @@ export const bathroom = {
   slug: 'bathroom',
   icon_png: '/decks/bathroom.png',
   icon_svg: '/decks/bathroom.svg',
+  page_title: 'Spanish Bathroom Flashcards',
   seo_title: 'Spanish Bathroom Flashcards with Pictures',
   seo_description:
     'Practice Spanish bathroom vocabulary with visual flashcards. Includes common bathroom items, toiletries, and fixtures used at home and in public restrooms.',

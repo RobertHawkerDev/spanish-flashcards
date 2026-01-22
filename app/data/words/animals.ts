@@ -4,6 +4,7 @@ export const animals = {
   slug: 'animals',
   icon_png: '/decks/animals.png',
   icon_svg: '/decks/animals.svg',
+  page_title: 'Spanish Animal Flashcards',
   seo_title: 'Spanish Animal Flashcards with Pictures',
   seo_description:
     'Practice Spanish animal vocabulary with visual flashcards. Includes common animals such as pets, wild animals, birds, sea creatures, and insects.',

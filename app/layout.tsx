@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: `${companyName} | Learn Spanish with Flashcards`,
+    default: `${companyName} | Spanish Vocabulary Flashcards with Pictures`,
     template: `%s | ${companyName}`,
   },
   description: `Learn over 3000 everyday Spanish words with interactive flashcards on ${companyName}. Improve your vocabulary, track progress, and share your results.`,

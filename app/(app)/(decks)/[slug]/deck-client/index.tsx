@@ -99,7 +99,7 @@ export default function DeckClient({
           onWrong={deck.actions.wrong}
           onCorrect={deck.actions.correct}
           deckSlug={slug}
-          onFirstFlip={handleFirstFlip} // ✅ pass down
+          onFirstFlip={handleFirstFlip}
         />
       )}
     </>

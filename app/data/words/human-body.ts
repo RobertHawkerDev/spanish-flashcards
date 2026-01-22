@@ -4,6 +4,7 @@ export const humanBody = {
   slug: 'human-body',
   icon_png: '/decks/human-body.png',
   icon_svg: '/decks/human-body.svg',
+  page_title: 'Spanish Human Body Flashcards',
   seo_title: 'Spanish Human Body Flashcards with Pictures',
   seo_description:
     'Practice Spanish human body vocabulary with visual flashcards. Includes external body parts, internal organs, and common anatomy-related terms.',

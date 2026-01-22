@@ -4,6 +4,7 @@ export const familyMembers = {
   slug: 'family-members',
   icon_png: '/decks/family-members.png',
   icon_svg: '/decks/family-members.svg',
+  page_title: 'Spanish Family Members Flashcards',
   seo_title: 'Spanish Family Members Flashcards with Pictures',
   seo_description:
     'Practice Spanish family members vocabulary with visual flashcards. Includes relatives, partners, and family roles across different generations.',
