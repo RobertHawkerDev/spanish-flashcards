@@ -9,6 +9,7 @@ import { kitchen } from './words/kitchen';
 import { musicalInstruments } from './words/musical-instruments';
 import { seaLife } from './words/sea-life';
 import { space } from './words/space';
+import { stationery } from './words/stationery';
 
 export const decks = [
   animals,
@@ -22,4 +23,5 @@ export const decks = [
   musicalInstruments,
   seaLife,
   space,
+  stationery,
 ];
