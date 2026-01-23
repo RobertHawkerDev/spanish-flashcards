@@ -4,8 +4,11 @@ import { clothes } from './clothes';
 import { familyMembers } from './family-members';
 import { fruitAndVegetables } from './fruit-and-vegetables';
 import { humanBody } from './human-body';
+import { humanitarianHelp } from './humanitarian-help';
 import { kitchen } from './kitchen';
 import { musicalInstruments } from './musical-instruments';
+import { seaLife } from './sea-life';
+import { space } from './space';
 
 export const words = [
   animals,
@@ -14,6 +17,9 @@ export const words = [
   familyMembers,
   fruitAndVegetables,
   humanBody,
+  humanitarianHelp,
   kitchen,
   musicalInstruments,
+  seaLife,
+  space,
 ];
