@@ -81,7 +81,7 @@ export default function FlashcardDeck({
             <button
               type="button"
               onClick={() => handleAnswer(false)}
-              className="flex flex-1 items-center justify-center gap-3 rounded-xl border-[1.5px] border-neutral-600 bg-white py-4 transition hover:cursor-pointer hover:bg-red-50 active:scale-[0.98]"
+              className="flex flex-1 items-center justify-center gap-3 rounded-xl border-2 border-neutral-900 bg-white py-4 transition hover:cursor-pointer hover:bg-red-50 active:scale-[0.98]"
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-500 text-white">
                 <LucideX />
@@ -94,7 +94,7 @@ export default function FlashcardDeck({
             <button
               type="button"
               onClick={() => handleAnswer(true)}
-              className="flex flex-1 items-center justify-center gap-3 rounded-xl border-[1.5px] border-neutral-600 bg-white py-4 transition hover:cursor-pointer hover:bg-green-50 active:scale-[0.98]"
+              className="flex flex-1 items-center justify-center gap-3 rounded-xl border-2 border-neutral-900 bg-white py-4 transition hover:cursor-pointer hover:bg-green-50 active:scale-[0.98]"
             >
               <span className="flex h-10 w-10 items-center justify-center rounded-full bg-green-500 text-white">
                 <LucideCheck />

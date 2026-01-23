@@ -50,7 +50,7 @@ export default function WordCard({
       <div className="size-full perspective-[1000px]">
         <div
           className={clsx(
-            'relative flex size-full h-80 w-full items-center justify-center rounded-xl border-[1.5px] border-neutral-600 bg-white text-black transition-transform duration-500 transform-3d hover:cursor-pointer sm:h-96',
+            'relative flex size-full h-80 w-full items-center justify-center rounded-xl border-2 border-neutral-900 bg-white text-black transition-transform duration-500 transform-3d hover:cursor-pointer sm:h-96',
             flipped && containerRotation,
           )}
           onClick={flipToBack}
@@ -78,7 +78,7 @@ export default function WordCard({
                 </div>
               </div>
 
-              <p className="pointer-events-none mt-6 text-center text-3xl font-bold select-none sm:text-4xl">
+              <p className="pointer-events-none mt-6 text-center text-3xl font-bold select-none">
                 {word.english}
               </p>
             </div>
