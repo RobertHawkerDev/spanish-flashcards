@@ -44,9 +44,10 @@ export default async function WordsPage({
       <div className="flex w-full flex-col items-center lg:w-2/3 2xl:w-1/2">
         <div className="flex w-full flex-row items-center justify-between gap-4">
           <h1 className="text-2xl font-bold lg:text-3xl">{deck.name} Words</h1>
+
           <Link
-            className="hidden min-w-52 items-center justify-center rounded-full bg-amber-400 px-6 py-4 text-center font-semibold text-black hover:bg-amber-500 lg:flex"
             href={`/${deck.slug}`}
+            className="text-base font-semibold text-black hover:underline"
           >
             Learn with Flashcards
           </Link>

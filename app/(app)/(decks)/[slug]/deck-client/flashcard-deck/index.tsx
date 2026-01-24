@@ -53,13 +53,13 @@ export default function FlashcardDeck({
             {title}
           </h1>
           <div className="flex flex-row items-center gap-2.5">
-            <p className="text-lg font-semibold">
+            <p className="text-lg font-semibold text-black">
               {current} / {total}
             </p>
             <p>·</p>
             <Link
               href={`${deckSlug}/words`}
-              className="text-base font-semibold text-neutral-800 hover:underline"
+              className="text-base font-semibold text-black hover:underline"
             >
               View all words
             </Link>
