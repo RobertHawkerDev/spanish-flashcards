@@ -8,13 +8,13 @@ export const space = {
   seo_title: 'Spanish Space Vocabulary with Pictures',
   seo_description:
     'Learn Spanish vocabulary related to space, planets, astronomy, space missions, and exploration using visual flashcards.',
-  word_count: 46,
+  word_count: 44,
   words: [
     {
       id: 1,
       english: 'alien',
       spanish_article: 'el',
-      spanish: 'alienígena',
+      spanish: 'extraterrestre',
       icon_png: 'space/alien.png',
       icon_svg: 'space/alien.svg',
     },
@@ -59,16 +59,8 @@ export const space = {
       icon_svg: 'space/constellation.svg',
     },
     {
-      id: 7,
-      english: 'doomsday',
-      spanish_article: 'el',
-      spanish: 'fin del mundo',
-      icon_png: 'space/doomsday.png',
-      icon_svg: 'space/doomsday.svg',
-    },
-    {
       id: 8,
-      english: 'earth',
+      english: 'Earth',
       spanish_article: 'la',
       spanish: 'Tierra',
       icon_png: 'space/earth.png',
@@ -148,7 +140,7 @@ export const space = {
     },
     {
       id: 18,
-      english: 'mars',
+      english: 'Mars',
       spanish_article: 'el',
       spanish: 'Marte',
       icon_png: 'space/mars.png',
@@ -156,7 +148,7 @@ export const space = {
     },
     {
       id: 19,
-      english: 'mercury',
+      english: 'Mercury',
       spanish_article: 'el',
       spanish: 'Mercurio',
       icon_png: 'space/mercury.png',
@@ -180,7 +172,7 @@ export const space = {
     },
     {
       id: 22,
-      english: 'moon',
+      english: 'Moon',
       spanish_article: 'la',
       spanish: 'Luna',
       icon_png: 'space/moon.png',
@@ -188,7 +180,7 @@ export const space = {
     },
     {
       id: 23,
-      english: 'neptune',
+      english: 'Neptune',
       spanish_article: 'el',
       spanish: 'Neptuno',
       icon_png: 'space/neptune.png',
@@ -236,8 +228,8 @@ export const space = {
     },
     {
       id: 29,
-      english: 'pluto',
-      spanish_article: 'Plutón',
+      english: 'Pluto',
+      spanish_article: 'el',
       spanish: 'Plutón',
       icon_png: 'space/pluto.png',
       icon_svg: 'space/pluto.svg',
@@ -245,8 +237,8 @@ export const space = {
     {
       id: 30,
       english: 'porthole',
-      spanish_article: 'la',
-      spanish: 'escotilla',
+      spanish_article: 'el',
+      spanish: 'ojo de buey',
       icon_png: 'space/porthole.png',
       icon_svg: 'space/porthole.svg',
     },
@@ -292,7 +284,7 @@ export const space = {
     },
     {
       id: 36,
-      english: 'saturn',
+      english: 'Saturn',
       spanish_article: 'el',
       spanish: 'Saturno',
       icon_png: 'space/saturn.png',
@@ -323,14 +315,6 @@ export const space = {
       icon_svg: 'space/spacesuit.svg',
     },
     {
-      id: 40,
-      english: 'sputnik',
-      spanish_article: 'el',
-      spanish: 'Sputnik',
-      icon_png: 'space/sputnik.png',
-      icon_svg: 'space/sputnik.svg',
-    },
-    {
       id: 41,
       english: 'star',
       spanish_article: 'la',
@@ -340,7 +324,7 @@ export const space = {
     },
     {
       id: 42,
-      english: 'sun',
+      english: 'Sun',
       spanish_article: 'el',
       spanish: 'Sol',
       icon_png: 'space/sun.png',
@@ -364,16 +348,16 @@ export const space = {
     },
     {
       id: 45,
-      english: 'uranus',
-      spanish_article: 'Urano',
+      english: 'Uranus',
+      spanish_article: 'el',
       spanish: 'Urano',
       icon_png: 'space/uranus.png',
       icon_svg: 'space/uranus.svg',
     },
     {
       id: 46,
-      english: 'venus',
-      spanish_article: 'Venus',
+      english: 'Venus',
+      spanish_article: 'el',
       spanish: 'Venus',
       icon_png: 'space/venus.png',
       icon_svg: 'space/venus.svg',

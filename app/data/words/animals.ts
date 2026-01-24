@@ -77,8 +77,8 @@ export const animals = {
     {
       id: 9,
       english: 'chicken',
-      spanish_article: 'la',
-      spanish: 'gallina',
+      spanish_article: 'el',
+      spanish: 'pollo',
       icon_png: 'animals/chicken.png',
       icon_svg: 'animals/chicken.svg',
     },

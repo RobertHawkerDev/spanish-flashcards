@@ -8,7 +8,7 @@ export const musicalInstruments = {
   seo_title: 'Spanish Musical Instruments Flashcards with Pictures',
   seo_description:
     'Practice Spanish musical instruments vocabulary with visual flashcards. Includes string, wind, percussion, and electronic instruments from around the world.',
-  word_count: 66,
+  word_count: 62,
   words: [
     {
       id: 1,
@@ -259,14 +259,6 @@ export const musicalInstruments = {
       icon_svg: 'musical-instruments/keyboard.svg',
     },
     {
-      id: 32,
-      english: 'launchpad',
-      spanish_article: 'el',
-      spanish: 'controlador MIDI',
-      icon_png: 'musical-instruments/launchpad.png',
-      icon_svg: 'musical-instruments/launchpad.svg',
-    },
-    {
       id: 33,
       english: 'lute',
       spanish_article: 'el',
@@ -379,14 +371,6 @@ export const musicalInstruments = {
       icon_svg: 'musical-instruments/recorder.svg',
     },
     {
-      id: 47,
-      english: 'santoor',
-      spanish_article: 'el',
-      spanish: 'santur',
-      icon_png: 'musical-instruments/santoor.png',
-      icon_svg: 'musical-instruments/santoor.svg',
-    },
-    {
       id: 48,
       english: 'saxophone',
       spanish_article: 'el',
@@ -411,28 +395,12 @@ export const musicalInstruments = {
       icon_svg: 'musical-instruments/sitar.svg',
     },
     {
-      id: 51,
-      english: 'snare drum',
-      spanish_article: 'la',
-      spanish: 'caja',
-      icon_png: 'musical-instruments/snare-drum.png',
-      icon_svg: 'musical-instruments/snare-drum.svg',
-    },
-    {
       id: 52,
       english: 'tambourine',
       spanish_article: 'la',
       spanish: 'pandereta',
       icon_png: 'musical-instruments/tambourine.png',
       icon_svg: 'musical-instruments/tambourine.svg',
-    },
-    {
-      id: 53,
-      english: 'timpani',
-      spanish_article: 'los',
-      spanish: 'timbales',
-      icon_png: 'musical-instruments/timpani.png',
-      icon_svg: 'musical-instruments/timpani.svg',
     },
     {
       id: 54,

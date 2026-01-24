@@ -8,11 +8,11 @@ export const landscapes = {
   seo_title: 'Spanish Landscapes Vocabulary with Pictures',
   seo_description:
     'Learn Spanish vocabulary for landscapes, natural features, places, and scenery using visual flashcards.',
-  word_count: 48,
+  word_count: 47,
   words: [
     {
       id: 1,
-      english: 'arctic',
+      english: 'Arctic',
       spanish_article: 'el',
       spanish: 'Ártico',
       icon_png: 'landscapes/arctic.png',
@@ -57,14 +57,6 @@ export const landscapes = {
       spanish: 'cabaña',
       icon_png: 'landscapes/cabin.png',
       icon_svg: 'landscapes/cabin.svg',
-    },
-    {
-      id: 7,
-      english: 'cable car',
-      spanish_article: 'el',
-      spanish: 'teleférico',
-      icon_png: 'landscapes/cable-car.png',
-      icon_svg: 'landscapes/cable-car.svg',
     },
     {
       id: 8,
@@ -161,6 +153,14 @@ export const landscapes = {
       spanish: 'fuente',
       icon_png: 'landscapes/fountain.png',
       icon_svg: 'landscapes/fountain.svg',
+    },
+    {
+      id: 19.7,
+      english: 'gondola lift',
+      spanish_article: 'la',
+      spanish: 'telecabina',
+      icon_png: 'landscapes/gondola-lift.png',
+      icon_svg: 'landscapes/gondola-lift.svg',
     },
     {
       id: 20,
@@ -339,14 +339,6 @@ export const landscapes = {
       icon_svg: 'landscapes/ruins.svg',
     },
     {
-      id: 42,
-      english: 'sakura',
-      spanish_article: 'el',
-      spanish: 'cerezo en flor',
-      icon_png: 'landscapes/sakura.png',
-      icon_svg: 'landscapes/sakura.svg',
-    },
-    {
       id: 43,
       english: 'sunrise',
       spanish_article: 'el',
@@ -380,9 +372,9 @@ export const landscapes = {
     },
     {
       id: 47,
-      english: 'wild west',
+      english: 'Wild West',
       spanish_article: 'el',
-      spanish: 'salvaje oeste',
+      spanish: 'salvaje Oeste',
       icon_png: 'landscapes/wild-west.png',
       icon_svg: 'landscapes/wild-west.svg',
     },

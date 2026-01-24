@@ -8,7 +8,7 @@ export const globalWarming = {
   seo_title: 'Spanish Global Warming Vocabulary with Pictures',
   seo_description:
     'Learn Spanish vocabulary related to global warming, climate change, pollution, renewable energy, and environmental threats using visual flashcards.',
-  word_count: 48,
+  word_count: 47,
   words: [
     {
       id: 1,
@@ -230,7 +230,7 @@ export const globalWarming = {
       id: 28,
       english: 'landslide',
       spanish_article: 'el',
-      spanish: 'deslizamiento de tierra',
+      spanish: 'corrimiento de tierra',
       icon_png: 'global-warming/landslide.png',
       icon_svg: 'global-warming/landslide.svg',
     },
@@ -238,7 +238,7 @@ export const globalWarming = {
       id: 29,
       english: 'nuclear plant',
       spanish_article: 'la',
-      spanish: 'central nuclear',
+      spanish: 'planta nuclear',
       icon_png: 'global-warming/nuclear-plant.png',
       icon_svg: 'global-warming/nuclear-plant.svg',
     },
@@ -313,14 +313,6 @@ export const globalWarming = {
       spanish: 'bolsa reutilizable',
       icon_png: 'global-warming/reusable-bag.png',
       icon_svg: 'global-warming/reusable-bag.svg',
-    },
-    {
-      id: 39,
-      english: 'save the planet',
-      spanish_article: 'el',
-      spanish: 'salvemos el planeta',
-      icon_png: 'global-warming/save-the-planet.png',
-      icon_svg: 'global-warming/save-the-planet.svg',
     },
     {
       id: 40,

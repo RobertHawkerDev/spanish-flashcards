@@ -17,7 +17,7 @@ export default function HomePage() {
           })}
         </div>
       </div>
-      <footer className="mt-8 text-center text-sm text-neutral-600">
+      <footer className="mt-12 text-center text-sm text-neutral-600">
         <p>
           © {new Date().getFullYear()} {companyName}
         </p>

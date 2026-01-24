@@ -26,10 +26,10 @@ import { summerCamp } from './words/summer-camp';
 export const decks = [
   airport,
   animals,
+  artStudio,
   bathroom,
   bugsAndInsects,
   clothes,
-  artStudio,
   familyMembers,
   fastFood,
   fruitAndVegetables,

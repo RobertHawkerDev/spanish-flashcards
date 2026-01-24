@@ -8,7 +8,7 @@ export const seaLife = {
   seo_title: 'Spanish Sea Life Vocabulary with Pictures',
   seo_description:
     'Learn Spanish vocabulary for sea life, ocean animals, fish, and marine ecosystems using visual flashcards.',
-  word_count: 48,
+  word_count: 46,
   words: [
     {
       id: 1,
@@ -38,7 +38,7 @@ export const seaLife = {
       id: 4,
       english: 'catfish',
       spanish_article: 'el',
-      spanish: 'pez gato',
+      spanish: 'bagre',
       icon_png: 'sea-life/catfish.png',
       icon_svg: 'sea-life/catfish.svg',
     },
@@ -105,14 +105,6 @@ export const seaLife = {
       spanish: 'pez',
       icon_png: 'sea-life/fish.png',
       icon_svg: 'sea-life/fish.svg',
-    },
-    {
-      id: 13,
-      english: 'flounder',
-      spanish_article: 'el',
-      spanish: 'lenguado',
-      icon_png: 'sea-life/flounder.png',
-      icon_svg: 'sea-life/flounder.svg',
     },
     {
       id: 14,
@@ -283,18 +275,10 @@ export const seaLife = {
       icon_svg: 'sea-life/seal.svg',
     },
     {
-      id: 35,
-      english: 'seashell',
-      spanish_article: 'la',
-      spanish: 'concha marina',
-      icon_png: 'sea-life/seashell.png',
-      icon_svg: 'sea-life/seashell.svg',
-    },
-    {
       id: 36,
       english: 'seaweed',
       spanish_article: 'la',
-      spanish: 'alga marina',
+      spanish: 'alga',
       icon_png: 'sea-life/seaweed.png',
       icon_svg: 'sea-life/seaweed.svg',
     },

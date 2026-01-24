@@ -8,7 +8,7 @@ export const pets = {
   seo_title: 'Spanish Pets Vocabulary with Pictures',
   seo_description:
     'Learn Spanish vocabulary for pets, pet care, accessories, and common pet animals using visual flashcards.',
-  word_count: 61,
+  word_count: 59,
   words: [
     {
       id: 1,
@@ -83,14 +83,6 @@ export const pets = {
       icon_svg: 'pets/carrier.svg',
     },
     {
-      id: 10,
-      english: 'cat tree',
-      spanish_article: 'el',
-      spanish: 'rascador',
-      icon_png: 'pets/cat-tree.png',
-      icon_svg: 'pets/cat-tree.svg',
-    },
-    {
       id: 11,
       english: 'cat',
       spanish_article: 'el',
@@ -133,8 +125,8 @@ export const pets = {
     {
       id: 16,
       english: 'dog food',
-      spanish_article: 'el',
-      spanish: 'pienso para perros',
+      spanish_article: 'la',
+      spanish: 'comida para perros',
       icon_png: 'pets/dog-food.png',
       icon_svg: 'pets/dog-food.svg',
     },
@@ -246,7 +238,7 @@ export const pets = {
       id: 30,
       english: 'kennel',
       spanish_article: 'la',
-      spanish: 'caseta',
+      spanish: 'perrera',
       icon_png: 'pets/kennel.png',
       icon_svg: 'pets/kennel.svg',
     },
@@ -441,14 +433,6 @@ export const pets = {
       spanish: 'araña',
       icon_png: 'pets/spider.png',
       icon_svg: 'pets/spider.svg',
-    },
-    {
-      id: 55,
-      english: 'teasing stick',
-      spanish_article: 'la',
-      spanish: 'varita para jugar',
-      icon_png: 'pets/teasing-stick.png',
-      icon_svg: 'pets/teasing-stick.svg',
     },
     {
       id: 56,

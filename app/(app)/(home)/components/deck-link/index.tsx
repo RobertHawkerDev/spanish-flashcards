@@ -28,10 +28,10 @@ export default function DeckLink({
     >
       <div
         className={[
-          'flex flex-row items-center justify-between bg-white px-3 py-3',
+          'flex flex-row items-center justify-between bg-white px-6 py-6',
           'border-b border-neutral-300',
           isLast && 'border-b-0',
-          'sm:flex-col sm:rounded-lg sm:border-2 sm:border-black sm:p-6 sm:px-0',
+          'sm:flex-col sm:rounded-lg sm:border-2 sm:border-black sm:p-8',
         ]
           .filter(Boolean)
           .join(' ')}
@@ -47,10 +47,10 @@ export default function DeckLink({
             />
           </div>
           <div className="flex flex-col">
-            <p className="text-base font-bold sm:mt-1 sm:text-lg">
+            <p className="text-base font-bold sm:mt-1.5 sm:text-lg">
               {deck.name}
             </p>
-            <p className="text-sm sm:mt-1 sm:text-center">
+            <p className="text-sm sm:mt-1.5 sm:text-center">
               {deck.word_count} words
             </p>
           </div>

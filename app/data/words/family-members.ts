@@ -246,7 +246,7 @@ export const familyMembers = {
       id: 30,
       english: 'husband',
       spanish_article: 'el',
-      spanish: 'esposo',
+      spanish: 'marido',
       icon_png: 'family-members/husband.png',
       icon_svg: 'family-members/husband.svg',
     },
