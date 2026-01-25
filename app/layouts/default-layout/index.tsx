@@ -1,3 +1,4 @@
+import Footer from '../footer';
 import Header from '../header';
 
 export default function DefaultLayout({
@@ -11,6 +12,7 @@ export default function DefaultLayout({
       <div className="flex w-full flex-1 flex-col overflow-y-auto pb-[calc(env(safe-area-inset-bottom)+6rem)] md:pb-0">
         {children}
       </div>
+      <Footer />
     </div>
   );
 }
