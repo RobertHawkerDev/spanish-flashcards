@@ -50,7 +50,7 @@ export default function DeckLink({
             <p className="text-base font-bold sm:mt-1.5 sm:text-lg">
               {deck.name}
             </p>
-            <p className="text-sm sm:mt-1.5 sm:text-center">
+            <p className="text-base font-medium sm:mt-1 sm:text-center">
               {deck.word_count} words
             </p>
           </div>
