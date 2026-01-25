@@ -1,4 +1,6 @@
-export const globalWarming = {
+import IDeck from '@/app/interface/deck';
+
+export const globalWarming: IDeck = {
   id: 'global-warming',
   name: 'Global Warming',
   slug: 'global-warming',

@@ -3,5 +3,6 @@ export default interface IWord {
   english: string;
   spanish: string;
   spanish_article: string;
+  icon_png: string;
   icon_svg: string;
 }

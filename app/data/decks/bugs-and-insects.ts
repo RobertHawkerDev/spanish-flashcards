@@ -1,4 +1,6 @@
-export const bugsAndInsects = {
+import IDeck from '@/app/interface/deck';
+
+export const bugsAndInsects: IDeck = {
   id: 'bugs-and-insects',
   name: 'Bugs & Insects',
   slug: 'bugs-and-insects',

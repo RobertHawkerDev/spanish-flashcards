@@ -1,4 +1,6 @@
-export const space = {
+import IDeck from '@/app/interface/deck';
+
+export const space: IDeck = {
   id: 'space',
   name: 'Space',
   slug: 'space',

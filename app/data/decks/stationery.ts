@@ -1,4 +1,6 @@
-export const stationery = {
+import IDeck from '@/app/interface/deck';
+
+export const stationery: IDeck = {
   id: 'stationery',
   name: 'Stationery',
   slug: 'stationery',

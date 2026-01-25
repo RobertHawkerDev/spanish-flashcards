@@ -1,4 +1,6 @@
-export const seaLife = {
+import IDeck from '@/app/interface/deck';
+
+export const seaLife: IDeck = {
   id: 'sea-life',
   name: 'Sea Life',
   slug: 'sea-life',

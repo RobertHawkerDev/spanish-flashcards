@@ -1,4 +1,6 @@
-export const office = {
+import IDeck from '@/app/interface/deck';
+
+export const office: IDeck = {
   id: 'office',
   name: 'Office',
   slug: 'office',

@@ -1,3 +1,5 @@
+import IDeck from '@/app/interface/deck';
+
 import { airport } from './airport';
 import { animals } from './animals';
 import { artStudio } from './art-studio';
@@ -23,7 +25,7 @@ import { sport } from './sport';
 import { stationery } from './stationery';
 import { summerCamp } from './summer-camp';
 
-export const words = [
+export const decks: IDeck[] = [
   airport,
   animals,
   artStudio,

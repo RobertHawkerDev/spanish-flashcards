@@ -1,4 +1,6 @@
-export const fruitAndVegetables = {
+import IDeck from '@/app/interface/deck';
+
+export const fruitAndVegetables: IDeck = {
   id: 'fruit-and-vegetables',
   name: 'Fruit and Vegetables',
   slug: 'fruit-and-vegetables',

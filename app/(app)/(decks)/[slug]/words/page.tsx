@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-import { words } from '@/app/data/words';
+import { decks } from '@/app/data/decks/index';
 import companyName from '@/app/utils/company-name';
 
 export async function generateMetadata({
@@ -13,7 +13,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
 
-  const deck = words.find(word => word.slug === slug);
+  const deck = decks.find(deck => deck.slug === slug);
 
   if (!deck) {
     return {
@@ -35,7 +35,7 @@ export default async function WordsPage({
 }) {
   const { slug } = await params;
 
-  const deck = words.find(word => word.slug === slug);
+  const deck = decks.find(deck => deck.slug === slug);
 
   if (!deck) return notFound();
 

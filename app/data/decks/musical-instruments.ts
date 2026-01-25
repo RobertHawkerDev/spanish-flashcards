@@ -1,4 +1,6 @@
-export const musicalInstruments = {
+import IDeck from '@/app/interface/deck';
+
+export const musicalInstruments: IDeck = {
   id: 'musical-instruments',
   name: 'Musical Instruments',
   slug: 'musical-instruments',

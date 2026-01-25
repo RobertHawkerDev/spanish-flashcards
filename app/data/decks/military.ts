@@ -1,4 +1,6 @@
-export const military = {
+import IDeck from '@/app/interface/deck';
+
+export const military: IDeck = {
   id: 'military',
   name: 'Military',
   slug: 'military',

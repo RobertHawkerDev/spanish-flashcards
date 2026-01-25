@@ -1,4 +1,6 @@
-export const landscapes = {
+import IDeck from '@/app/interface/deck';
+
+export const landscapes: IDeck = {
   id: 'landscapes',
   name: 'Landscapes',
   slug: 'landscapes',

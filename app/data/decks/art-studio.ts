@@ -1,4 +1,6 @@
-export const artStudio = {
+import IDeck from '@/app/interface/deck';
+
+export const artStudio: IDeck = {
   id: 'art-studio',
   name: 'Art Studio',
   slug: 'art-studio',

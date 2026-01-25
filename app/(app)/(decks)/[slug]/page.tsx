@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import { words } from '@/app/data/words';
+import { decks } from '@/app/data/decks/index';
 import companyName from '@/app/utils/company-name';
 
 import DeckClient from './deck-client';
@@ -13,7 +13,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
 
-  const collection = words.find(word => word.slug === slug);
+  const collection = decks.find(deck => deck.slug === slug);
 
   if (!collection) {
     return {
@@ -35,7 +35,7 @@ export default async function DeckPage({
 }) {
   const { slug } = await params;
 
-  const collection = words.find(word => word.slug === slug);
+  const collection = decks.find(deck => deck.slug === slug);
 
   if (!collection) return notFound();
 

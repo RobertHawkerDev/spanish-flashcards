@@ -1,4 +1,6 @@
-export const kitchen = {
+import IDeck from '@/app/interface/deck';
+
+export const kitchen: IDeck = {
   id: 'kitchen',
   name: 'Kitchen',
   slug: 'kitchen',

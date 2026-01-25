@@ -1,4 +1,6 @@
-export const fastFood = {
+import IDeck from '@/app/interface/deck';
+
+export const fastFood: IDeck = {
   id: 'fast-food',
   name: 'Fast Food',
   slug: 'fast-food',

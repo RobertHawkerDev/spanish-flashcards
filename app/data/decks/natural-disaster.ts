@@ -1,4 +1,6 @@
-export const naturalDisaster = {
+import IDeck from '@/app/interface/deck';
+
+export const naturalDisaster: IDeck = {
   id: 'natural-disaster',
   name: 'Natural Disaster',
   slug: 'natural-disaster',

@@ -1,4 +1,6 @@
-export const humanBody = {
+import IDeck from '@/app/interface/deck';
+
+export const humanBody: IDeck = {
   id: 'human-body',
   name: 'Human Body',
   slug: 'human-body',

@@ -1,4 +1,6 @@
-export const summerCamp = {
+import IDeck from '@/app/interface/deck';
+
+export const summerCamp: IDeck = {
   id: 'summer-camp',
   name: 'Summer Camp',
   slug: 'summer-camp',

@@ -1,4 +1,6 @@
-export const sport = {
+import IDeck from '@/app/interface/deck';
+
+export const sport: IDeck = {
   id: 'sport',
   name: 'Sport',
   slug: 'sport',

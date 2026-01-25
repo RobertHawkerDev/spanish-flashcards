@@ -1,4 +1,6 @@
-export const familyMembers = {
+import IDeck from '@/app/interface/deck';
+
+export const familyMembers: IDeck = {
   id: 'family-members',
   name: 'Family Members',
   slug: 'family-members',

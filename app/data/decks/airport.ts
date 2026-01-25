@@ -1,4 +1,6 @@
-export const airport = {
+import IDeck from '@/app/interface/deck';
+
+export const airport: IDeck = {
   id: 'airport',
   name: 'Airport',
   slug: 'airport',

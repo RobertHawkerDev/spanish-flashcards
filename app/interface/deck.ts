@@ -6,6 +6,7 @@ export default interface IDeck {
   slug: string;
   icon_png: string;
   icon_svg: string;
+  page_title: string;
   seo_description: string;
   seo_title: string;
   word_count: number;

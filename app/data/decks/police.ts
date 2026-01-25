@@ -1,4 +1,6 @@
-export const police = {
+import IDeck from '@/app/interface/deck';
+
+export const police: IDeck = {
   id: 'police',
   name: 'Police',
   slug: 'police',
