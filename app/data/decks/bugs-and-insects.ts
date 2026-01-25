@@ -2,7 +2,7 @@ import IDeck from '@/app/interface/deck';
 
 export const bugsAndInsects: IDeck = {
   id: 'bugs-and-insects',
-  name: 'Bugs & Insects',
+  name: 'Bugs and Insects',
   slug: 'bugs-and-insects',
   icon_png: '/decks/bugs-and-insects.png',
   icon_svg: '/decks/bugs-and-insects.svg',
