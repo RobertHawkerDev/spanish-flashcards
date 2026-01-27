@@ -6,7 +6,7 @@ import socialLinks from './social-links';
 
 export default function Footer() {
   const footerClasses = clsx(
-    'hidden md:flex min-h-16 w-full',
+    'min-h-16 w-full',
     'border-t border-neutral-50 bg-white',
     'dark:border-neutral-800 dark:bg-neutral-950/70 backdrop-blur',
     'pt-12 pb-[calc(env(safe-area-inset-bottom)+4rem)]',

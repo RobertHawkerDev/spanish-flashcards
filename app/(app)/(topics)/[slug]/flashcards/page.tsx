@@ -40,7 +40,7 @@ export default async function topicPage({
   if (!collection) return notFound();
 
   return (
-    <main className="flex min-h-dvh flex-1 flex-col bg-neutral-100 py-4">
+    <main className="flex flex-1 flex-col bg-neutral-100 py-4">
       <div className="w-full">
         <DeckClient
           title={collection.page_title}
