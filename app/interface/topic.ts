@@ -1,0 +1,14 @@
+import IWord from './word';
+
+export default interface ITopic {
+  id: string;
+  name: string;
+  slug: string;
+  icon_png: string;
+  icon_svg: string;
+  page_title: string;
+  seo_description: string;
+  seo_title: string;
+  word_count: number;
+  words: IWord[];
+}
