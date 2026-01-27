@@ -43,19 +43,20 @@ export default async function TopicPage({
     <main className="flex flex-1 flex-col bg-neutral-100 px-5 py-10">
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-10">
         {/* Hero */}
-        <header className="flex flex-col items-center text-center">
-          <div className="relative mb-3 size-24 sm:size-28">
-            <Image
-              fill
-              src={collection.icon_svg}
-              alt={`${collection.name} icon`}
-              className="pointer-events-none select-none"
-              draggable={false}
-              priority
-            />
+        <div className="flex flex-col items-center text-center">
+          <div className="flex aspect-square items-center justify-center overflow-hidden rounded-full border border-neutral-300 bg-white p-8">
+            <div className="relative mb-3 size-24">
+              <Image
+                fill
+                src={collection.icon_svg}
+                alt={`${collection.name} icon`}
+                className="pointer-events-none select-none"
+                draggable={false}
+                priority
+              />
+            </div>
           </div>
-
-          <h1 className="text-3xl font-bold text-neutral-900 sm:text-4xl">
+          <h1 className="text-2xl font-bold text-neutral-900 sm:text-3xl">
             {collection.name}
           </h1>
 
@@ -66,15 +67,7 @@ export default async function TopicPage({
           <p className="mt-4 max-w-3xl text-base leading-relaxed font-medium text-neutral-700">
             {collection.seo_description}
           </p>
-
-          <p className="mt-3 max-w-3xl text-sm font-medium text-neutral-600">
-            Pick a mode below — use{' '}
-            <span className="font-semibold">Flashcards</span> to practice
-            actively, or browse the{' '}
-            <span className="font-semibold">Words List</span> to review
-            everything at a glance.
-          </p>
-        </header>
+        </div>
 
         {/* Options */}
         <section className="grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -103,12 +96,6 @@ export default async function TopicPage({
 
                 <ArrowRight className="mt-1 size-5 text-neutral-400 transition group-hover:translate-x-0.5 group-hover:text-neutral-700" />
               </div>
-
-              <ul className="mt-5 space-y-2 text-sm font-medium text-neutral-700">
-                <li>• Learn by recall (stronger memory than reading)</li>
-                <li>• Track your progress as you work through the topic</li>
-                <li>• Best when you have 3–10 minutes spare</li>
-              </ul>
 
               <div className="mt-6">
                 <span className="inline-flex w-fit items-center justify-center rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-neutral-900 transition group-hover:bg-amber-500">
@@ -140,12 +127,6 @@ export default async function TopicPage({
 
                 <ArrowRight className="mt-1 size-5 text-neutral-400 transition group-hover:translate-x-0.5 group-hover:text-neutral-700" />
               </div>
-
-              <ul className="mt-5 space-y-2 text-sm font-medium text-neutral-700">
-                <li>• Scan the full vocabulary set in one place</li>
-                <li>• Helpful for quick refreshers and spotting gaps</li>
-                <li>• Perfect if you prefer reading first</li>
-              </ul>
 
               <div className="mt-6">
                 <span className="inline-flex w-fit items-center justify-center rounded-full bg-amber-400 px-6 py-3 text-sm font-semibold text-neutral-900 transition group-hover:bg-amber-500">
