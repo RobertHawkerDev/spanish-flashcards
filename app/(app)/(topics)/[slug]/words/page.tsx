@@ -50,7 +50,7 @@ export default async function WordsPage({
           </h1>
 
           <Link
-            href={`/${topic.slug}`}
+            href={`/${topic.slug}/flashcards`}
             className="inline-flex w-fit shrink-0 items-center justify-center rounded-full bg-amber-400 px-6 py-3 font-semibold text-neutral-900 hover:bg-amber-500"
           >
             Learn with Flashcards
@@ -78,7 +78,7 @@ export default async function WordsPage({
         <div className="flex justify-center py-5">
           <Link
             className="flex max-w-96 min-w-52 items-center justify-center rounded-full bg-amber-400 px-6 py-4 text-center font-semibold text-neutral-900 hover:bg-amber-500"
-            href={`/${topic.slug}`}
+            href={`/${topic.slug}/flashcards`}
           >
             Learn with Flashcards
           </Link>
