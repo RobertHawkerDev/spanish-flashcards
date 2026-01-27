@@ -3,7 +3,7 @@
 import { LucideVolume2 } from 'lucide-react';
 import Image from 'next/image';
 
-import IWord from '@/app/interface/word';
+import IWord from '@/app/interfaces/word';
 import handleWordPronunciation from '@/app/utils/pronunciation/handle-pronunciation';
 
 export default function WordCard({

@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react';
 
-import type IWord from '@/app/interface/word';
+import type IWord from '@/app/interfaces/word';
 
 export type Answer = 'correct' | 'wrong';
 

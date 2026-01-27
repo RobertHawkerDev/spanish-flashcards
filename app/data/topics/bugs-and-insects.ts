@@ -1,4 +1,4 @@
-import IDeck from '@/app/interface/topic';
+import IDeck from '@/app/interfaces/topic';
 
 export const bugsAndInsects: IDeck = {
   id: 'bugs-and-insects',

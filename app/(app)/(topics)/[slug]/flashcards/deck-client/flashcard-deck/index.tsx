@@ -4,7 +4,7 @@ import { track } from '@vercel/analytics';
 import { LucideCheck, LucideX } from 'lucide-react';
 import { useRef } from 'react';
 
-import IWord from '@/app/interface/word';
+import IWord from '@/app/interfaces/word';
 
 import ProgressBar from '../progress-bar';
 import WordCard from '../word-card';

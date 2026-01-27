@@ -1,4 +1,4 @@
-import IWord from '@/app/interface/word';
+import IWord from '@/app/interfaces/word';
 
 export default function handleWordPronunciation(
   event: React.MouseEvent,

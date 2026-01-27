@@ -3,7 +3,7 @@
 import { track } from '@vercel/analytics';
 import { useEffect, useRef } from 'react';
 
-import type IWord from '@/app/interface/word';
+import type IWord from '@/app/interfaces/word';
 
 import FlashcardDeck from './flashcard-deck';
 import { useFlashcardDeck } from './hooks/use-flashcard-deck';

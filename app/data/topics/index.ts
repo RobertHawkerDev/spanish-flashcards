@@ -1,4 +1,4 @@
-import ITopic from '@/app/interface/topic';
+import ITopic from '@/app/interfaces/topic';
 
 import { airport } from './airport';
 import { animals } from './animals';

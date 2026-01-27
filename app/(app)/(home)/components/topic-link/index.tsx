@@ -4,7 +4,7 @@ import { track } from '@vercel/analytics';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import Itopic from '@/app/interface/topic';
+import Itopic from '@/app/interfaces/topic';
 
 export default function TopicLink({ topic }: { topic: Itopic }) {
   return (
