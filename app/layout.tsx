@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     default: `${companyName} | Spanish Vocabulary Flashcards with Pictures`,
     template: `%s | ${companyName}`,
   },
-  description: `Learn over 1000 everyday Spanish words with interactive flashcards on ${companyName}. Improve your vocabulary, track progress, and share your results.`,
+  description: `Learn Spanish faster with interactive flashcards, pictures, and audio. Improve vocabulary, track progress, and share results on ${companyName}.`,
   other: {
     google: 'notranslate',
   },
