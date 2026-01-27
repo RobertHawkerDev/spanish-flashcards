@@ -7,9 +7,9 @@ export default function DefaultLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex min-h-dvh w-full flex-col bg-neutral-100">
+    <div className="flex min-h-dvh w-full flex-col bg-neutral-100 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-50">
       <Header />
-      <div className="flex w-full flex-1 flex-col overflow-y-auto pb-[calc(env(safe-area-inset-bottom)+6rem)] md:pb-0">
+      <div className="container-x mx-auto flex w-full max-w-7xl flex-1 flex-col">
         {children}
       </div>
       <Footer />

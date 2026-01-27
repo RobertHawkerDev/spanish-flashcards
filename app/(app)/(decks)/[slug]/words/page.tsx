@@ -1,10 +1,11 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { decks } from '@/app/data/decks/index';
 import companyName from '@/app/utils/company-name';
+
+import WordCard from './word-card';
 
 export async function generateMetadata({
   params,
@@ -36,51 +37,52 @@ export default async function WordsPage({
   const { slug } = await params;
 
   const deck = decks.find(deck => deck.slug === slug);
-
   if (!deck) return notFound();
 
   return (
-    <main className="flex flex-col items-center px-6 py-10 pb-16 sm:px-10">
-      <div className="flex w-full flex-col items-center lg:w-2/3 2xl:w-1/2">
-        <div className="flex w-full flex-row items-center justify-between gap-4">
-          <h1 className="text-2xl font-bold lg:text-3xl">{deck.name} Words</h1>
+    <main className="flex flex-1 flex-col py-6">
+      {/* Center the content like your screenshots */}
+      <div className="mx-auto flex w-full max-w-3xl flex-col gap-8 lg:max-w-4xl">
+        {/* Header */}
+        <div className="flex w-full flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <h1 className="text-2xl font-bold text-neutral-900 md:text-3xl dark:text-neutral-50">
+            {deck.name} Words
+          </h1>
 
           <Link
             href={`/${deck.slug}`}
-            className="text-base font-semibold text-black hover:underline"
+            className="inline-flex w-fit shrink-0 items-center justify-center rounded-full bg-amber-400 px-6 py-3 font-semibold text-neutral-900 hover:bg-amber-500"
           >
             Learn with Flashcards
           </Link>
         </div>
 
-        <div className="mt-7 w-full overflow-hidden rounded-xl border border-neutral-300 bg-white">
+        {/* List card */}
+        <div
+          className={[
+            'w-full overflow-hidden rounded-xl border bg-white',
+            // Light: small, darker shadow (your preference)
+            'border-neutral-200 shadow-[0_2px_6px_rgba(0,0,0,0.12)]',
+            // Dark: match your dark card tone
+            'dark:border-neutral-700 dark:bg-neutral-800/70 dark:shadow-[0_8px_24px_rgba(0,0,0,0.45)]',
+          ].join(' ')}
+        >
           {deck.words.map((word, index) => {
             const isLast = index === deck.words.length - 1;
 
-            return (
-              <div
-                key={word.id}
-                className={`flex flex-row items-center gap-8 ${isLast ? 'border-b-0' : 'border-b'} border-b-neutral-300 px-6 py-4`}
-              >
-                <div className="relative size-16">
-                  <Image fill alt="" src={`/words/${word.icon_svg}`} />
-                </div>
-                <div>
-                  <p className="text-xl font-semibold">
-                    {word.spanish_article} {word.spanish}
-                  </p>
-                  <p className="mt-0.5 text-base">{word.english}</p>
-                </div>
-              </div>
-            );
+            return <WordCard key={word.id} isLast={isLast} word={word} />;
           })}
         </div>
-        <Link
-          className="mt-10 flex max-w-96 min-w-52 items-center justify-center rounded-full bg-amber-400 px-6 py-4 text-center font-semibold text-black hover:bg-amber-500"
-          href={`/${deck.slug}`}
-        >
-          Learn with Flashcards
-        </Link>
+
+        {/* Bottom CTA */}
+        <div className="flex justify-center py-5">
+          <Link
+            className="flex max-w-96 min-w-52 items-center justify-center rounded-full bg-amber-400 px-6 py-4 text-center font-semibold text-neutral-900 hover:bg-amber-500"
+            href={`/${deck.slug}`}
+          >
+            Learn with Flashcards
+          </Link>
+        </div>
       </div>
     </main>
   );

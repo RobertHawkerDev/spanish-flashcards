@@ -1,21 +1,15 @@
 'use client';
 
 import { track } from '@vercel/analytics';
-import { LucideChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import IDeck from '@/app/interface/deck';
 
-export default function DeckLink({
-  deck,
-  isLast,
-}: {
-  deck: IDeck;
-  isLast: boolean;
-}) {
+export default function DeckLink({ deck }: { deck: IDeck }) {
   return (
     <Link
+      className="h-full"
       href={`/${deck.slug}`}
       onClick={() => {
         const payload = {
@@ -26,37 +20,25 @@ export default function DeckLink({
         track('deck_opened', payload);
       }}
     >
-      <div
-        className={[
-          'flex flex-row items-center justify-between bg-white px-6 py-6',
-          'border-b border-neutral-300',
-          isLast && 'border-b-0',
-          'sm:flex-col sm:rounded-lg sm:border-2 sm:border-black sm:p-8',
-        ]
-          .filter(Boolean)
-          .join(' ')}
-      >
-        <div className="flex flex-row items-center gap-5 sm:flex-col">
-          <div className="relative h-12 w-12 sm:size-28">
+      <div className="flex h-full min-h-48 flex-col items-center justify-center rounded-lg border border-neutral-300 bg-white shadow-[0_2px_6px_rgba(0,0,0,0.12)] dark:border-neutral-800 dark:bg-neutral-900/70 dark:ring-1 dark:shadow-black/50 dark:ring-white/5">
+        <div className="flex flex-col items-center p-4 md:p-6">
+          <div className="relative size-20 md:size-24">
             <Image
               className="pointer-events-none select-none"
               draggable={false}
               fill
-              alt=""
+              alt={`${deck.name} icon`}
               src={deck.icon_svg}
             />
           </div>
-          <div className="flex flex-col">
-            <p className="text-base font-bold sm:mt-1.5 sm:text-lg">
+          <div className="flex flex-col items-center">
+            <h3 className="mt-4 text-center text-base font-semibold md:text-lg dark:text-neutral-100">
               {deck.name}
-            </p>
-            <p className="text-base font-medium sm:mt-1 sm:text-center">
+            </h3>
+            <p className="mt-1 text-sm font-medium text-neutral-700 md:text-base dark:text-neutral-400">
               {deck.word_count} words
             </p>
           </div>
-        </div>
-        <div className="sm:hidden">
-          <LucideChevronRight />
         </div>
       </div>
     </Link>

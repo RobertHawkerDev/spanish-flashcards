@@ -40,12 +40,14 @@ export default async function DeckPage({
   if (!collection) return notFound();
 
   return (
-    <main className="px-6">
-      <DeckClient
-        title={collection.page_title}
-        slug={slug}
-        words={collection.words}
-      />
+    <main className="flex min-h-dvh flex-1 flex-col bg-neutral-100 py-4">
+      <div className="w-full">
+        <DeckClient
+          title={collection.page_title}
+          slug={slug}
+          words={collection.words}
+        />
+      </div>
     </main>
   );
 }

@@ -2,11 +2,11 @@
 
 import { track } from '@vercel/analytics';
 import { LucideCheck, LucideX } from 'lucide-react';
-import Link from 'next/link';
 import { useRef } from 'react';
 
 import IWord from '@/app/interface/word';
 
+import ProgressBar from '../progress-bar';
 import WordCard from '../word-card';
 
 export default function FlashcardDeck({
@@ -28,7 +28,6 @@ export default function FlashcardDeck({
   onCorrect: () => void;
   onFirstFlip: (cardIndex: number) => void;
 }) {
-  // prevents double-firing on spam clicks for the same card
   const answeredKeyReference = useRef<string | null>(null);
 
   const handleAnswer = (correct: boolean) => {
@@ -46,64 +45,65 @@ export default function FlashcardDeck({
   };
 
   return (
-    <div className="flex flex-1 flex-col items-center py-7">
-      <div className="w-full max-w-4xl">
-        <div className="mb-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <h1 className="text-2xl font-semibold tracking-tight text-black">
-            {title}
-          </h1>
-          <div className="flex flex-row items-center gap-2.5">
-            <p className="text-lg font-semibold text-black">
-              {current} / {total}
-            </p>
-            <p>·</p>
-            <Link
-              href={`${deckSlug}/words`}
-              className="text-base font-semibold text-black hover:underline"
-            >
-              View all words
-            </Link>
-          </div>
-        </div>
+    <div className="flex flex-1 flex-col gap-5">
+      <ProgressBar
+        label={title}
+        showCount={true}
+        current={current}
+        total={total}
+      />
 
-        {/* Card */}
-        <WordCard
-          key={word.id}
-          word={word}
-          deckSlug={deckSlug}
-          cardIndex={current}
-          onFirstFlip={onFirstFlip}
-        />
+      {/* Card */}
+      <WordCard
+        key={word.id}
+        word={word}
+        deckSlug={deckSlug}
+        cardIndex={current}
+        onFirstFlip={onFirstFlip}
+      />
 
-        {/* Actions */}
-        <div className="mt-7 flex flex-col gap-4">
-          <div className="flex w-full justify-center gap-3">
-            <button
-              type="button"
-              onClick={() => handleAnswer(false)}
-              className="flex flex-1 items-center justify-center gap-3 rounded-xl border-2 border-neutral-900 bg-white py-4 transition hover:cursor-pointer hover:bg-red-50 active:scale-[0.98]"
-            >
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-500 text-white">
-                <LucideX />
-              </span>
-              <span className="pointer-events-none text-base font-semibold select-none">
-                Incorrect
-              </span>
-            </button>
+      {/* Actions */}
+      <div className="flex flex-col gap-4">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-2">
+          <button
+            type="button"
+            onClick={() => handleAnswer(false)}
+            className={[
+              'flex flex-col items-center justify-center gap-3 rounded-xl border bg-white px-5 py-4 text-left',
+              'border-neutral-200 shadow-[0_2px_6px_rgba(0,0,0,0.12)]',
+              'transition active:scale-[0.99]',
+              'hover:bg-neutral-50',
+              'dark:border-neutral-700 dark:bg-neutral-800/70 dark:hover:bg-neutral-800/80',
+              'dark:shadow-[0_8px_24px_rgba(0,0,0,0.45)]',
+            ].join(' ')}
+          >
+            <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-red-500 text-white">
+              <LucideX />
+            </span>
+            <span className="pointer-events-none text-sm font-semibold text-neutral-900 select-none dark:text-neutral-50">
+              Incorrect
+            </span>
+          </button>
 
-            <button
-              type="button"
-              onClick={() => handleAnswer(true)}
-              className="flex flex-1 items-center justify-center gap-3 rounded-xl border-2 border-neutral-900 bg-white py-4 transition hover:cursor-pointer hover:bg-green-50 active:scale-[0.98]"
-            >
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-green-500 text-white">
-                <LucideCheck />
-              </span>
-              <span className="pointer-events-none text-base font-semibold select-none">
-                Correct
-              </span>
-            </button>
-          </div>
+          <button
+            type="button"
+            onClick={() => handleAnswer(true)}
+            className={[
+              'flex flex-col items-center justify-center gap-2 rounded-xl border bg-white text-left',
+              'border-neutral-200 shadow-[0_2px_6px_rgba(0,0,0,0.12)]',
+              'transition active:scale-[0.99]',
+              'hover:bg-neutral-50',
+              'dark:border-neutral-700 dark:bg-neutral-800/70 dark:hover:bg-neutral-800/80',
+              'dark:shadow-[0_8px_24px_rgba(0,0,0,0.45)]',
+            ].join(' ')}
+          >
+            <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-green-500 text-white">
+              <LucideCheck />
+            </span>
+            <span className="pointer-events-none text-sm font-semibold text-neutral-900 select-none dark:text-neutral-50">
+              Correct
+            </span>
+          </button>
         </div>
       </div>
     </div>

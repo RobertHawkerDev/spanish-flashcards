@@ -28,3 +28,9 @@ body {
 nextjs-portal {
   display: none;
 }
+
+@layer utilities {
+  .container-x {
+    @apply px-4 md:px-8 lg:px-16 xl:px-24;
+  }
+}
