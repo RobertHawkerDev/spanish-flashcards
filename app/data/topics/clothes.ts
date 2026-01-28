@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const clothes: IDeck = {
+export const clothes: ITopic = {
   id: 'clothes',
   name: 'Clothes',
   slug: 'clothes',
   icon_png: '/decks/clothes.png',
   icon_svg: '/decks/clothes.svg',
-  page_title: 'Spanish Clothes Flashcards',
-  seo_title: 'Spanish Clothes Flashcards with Pictures',
-  seo_description:
-    'Practice Spanish clothes vocabulary with visual flashcards. Includes common clothing, footwear, and accessories for everyday wear, formal outfits, and seasonal items.',
+  description:
+    'Learn essential Spanish clothes vocabulary with our visual flashcards and words list. This topic includes common clothing, footwear, and accessories for everyday wear, formal outfits, and seasonal items.',
   word_count: 75,
   words: [
     {

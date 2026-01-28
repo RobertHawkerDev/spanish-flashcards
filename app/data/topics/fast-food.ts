@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const fastFood: IDeck = {
+export const fastFood: ITopic = {
   id: 'fast-food',
   name: 'Fast Food',
   slug: 'fast-food',
   icon_png: '/decks/fast-food.png',
   icon_svg: '/decks/fast-food.svg',
-  page_title: 'Spanish Fast Food Vocabulary',
-  seo_title: 'Spanish Fast Food Vocabulary with Pictures',
-  seo_description:
-    'Learn Spanish vocabulary for fast food, snacks, and popular takeaway meals using visual flashcards.',
+  description:
+    'Learn essential Spanish fast food vocabulary with our visual flashcards and words list. This topic includes fast food, snacks, and popular takeaway meals.',
   word_count: 42,
   words: [
     {

@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const airport: IDeck = {
+export const airport: ITopic = {
   id: 'airport',
   name: 'Airport',
   slug: 'airport',
   icon_png: '/decks/airport.png',
   icon_svg: '/decks/airport.svg',
-  page_title: 'Spanish Airport Flashcards',
-  seo_title: 'Spanish Airport Vocabulary Flashcards with Pictures',
-  seo_description:
-    'Learn essential Spanish airport vocabulary with visual flashcards. Covers arrivals, departures, security, boarding, aircraft, and airport facilities.',
+  description:
+    'Learn essential Spanish airport vocabulary with our visual flashcards and words list. This topic includes arrivals, departures, security, boarding, aircraft, and airport facilities.',
   word_count: 61,
   words: [
     {

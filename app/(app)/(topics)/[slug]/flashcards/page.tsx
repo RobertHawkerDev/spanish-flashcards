@@ -13,40 +13,36 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
 
-  const collection = topics.find(topic => topic.slug === slug);
+  const topic = topics.find(topic => topic.slug === slug);
 
-  if (!collection) {
+  if (!topic) {
     return {
-      title: 'topic Not Found',
-      description: `The vocabulary topic you're looking for doesn't exist or may have been removed. Browse available ${companyName} topics.`,
+      title: 'Flashcards Not Found',
+      description: `The topic you are looking for does not exist or may have been removed. Return home and browse available topics on ${companyName}.`,
     };
   }
 
   return {
-    title: collection.seo_title,
-    description: collection.seo_description,
+    title: `Spanish ${topic.name} Vocabulary Flashcards with Pictures`,
+    description: `Memorize and learn words in the ${topic.name.toLowerCase()} topic with our fun and interactive flashcards. Includes translations, pictures and audio.`,
   };
 }
 
-export default async function topicPage({
+export default async function FlashcardsPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
 
-  const collection = topics.find(topic => topic.slug === slug);
+  const topic = topics.find(topic => topic.slug === slug);
 
-  if (!collection) return notFound();
+  if (!topic) return notFound();
 
   return (
     <main className="flex flex-1 flex-col bg-neutral-100 py-4">
       <div className="w-full">
-        <DeckClient
-          title={collection.page_title}
-          slug={slug}
-          words={collection.words}
-        />
+        <DeckClient title={topic.name} slug={slug} words={topic.words} />
       </div>
     </main>
   );

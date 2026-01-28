@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const office: IDeck = {
+export const office: ITopic = {
   id: 'office',
   name: 'Office',
   slug: 'office',
   icon_png: '/decks/office.png',
   icon_svg: '/decks/office.svg',
-  page_title: 'Spanish Office Flashcards',
-  seo_title: 'Spanish Office Vocabulary Flashcards with Pictures',
-  seo_description:
-    'Learn essential Spanish office and workplace vocabulary with visual flashcards. Covers office spaces, equipment, communication, and daily work items.',
+  description:
+    'Learn essential Spanish office vocabulary with our visual flashcards and words list. This topic includes office spaces, equipment, communication, and daily work items.',
   word_count: 40,
   words: [
     {

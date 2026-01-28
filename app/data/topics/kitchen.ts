@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const kitchen: IDeck = {
+export const kitchen: ITopic = {
   id: 'kitchen',
   name: 'Kitchen',
   slug: 'kitchen',
   icon_png: '/decks/kitchen.png',
   icon_svg: '/decks/kitchen.svg',
-  page_title: 'Spanish Kitchen Flashcards',
-  seo_title: 'Spanish Kitchen Flashcards with Pictures',
-  seo_description:
-    'Practice Spanish kitchen vocabulary with visual flashcards. Includes appliances, cookware, utensils, and everyday items used for cooking and dining.',
+  description:
+    'Learn essential Spanish kitchen vocabulary with our visual flashcards and words list. This topic includes appliances, cookware, utensils, and everyday items used for cooking and dining.',
   word_count: 56,
   words: [
     {

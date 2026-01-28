@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const naturalDisaster: IDeck = {
+export const naturalDisaster: ITopic = {
   id: 'natural-disaster',
   name: 'Natural Disaster',
   slug: 'natural-disaster',
   icon_png: '/decks/natural-disaster.png',
   icon_svg: '/decks/natural-disaster.svg',
-  page_title: 'Spanish Natural Disaster Vocabulary',
-  seo_title: 'Spanish Natural Disaster Vocabulary with Pictures',
-  seo_description:
-    'Learn Spanish vocabulary related to natural disasters, emergencies, and global relief efforts using visual flashcards.',
+  description:
+    'Learn essential Spanish natural disaster vocabulary with our visual flashcards and words list. This topic includes natural disasters, emergencies, and global relief efforts.',
   word_count: 46,
   words: [
     {

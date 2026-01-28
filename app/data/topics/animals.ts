@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const animals: IDeck = {
+export const animals: ITopic = {
   id: 'animals',
   name: 'Animals',
   slug: 'animals',
   icon_png: '/decks/animals.png',
   icon_svg: '/decks/animals.svg',
-  page_title: 'Spanish Animal Flashcards',
-  seo_title: 'Spanish Animal Flashcards with Pictures',
-  seo_description:
-    'Practice Spanish animal vocabulary with visual flashcards. Includes common animals such as pets, wild animals, birds, sea creatures, and insects.',
+  description:
+    'Learn essential Spanish animals vocabulary with our visual flashcards and words list. This topic includes pets, wild animals, birds, sea creatures, and insects.',
   word_count: 60,
   words: [
     {

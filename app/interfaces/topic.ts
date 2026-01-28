@@ -6,9 +6,7 @@ export default interface ITopic {
   slug: string;
   icon_png: string;
   icon_svg: string;
-  page_title: string;
-  seo_description: string;
-  seo_title: string;
+  description: string;
   word_count: number;
   words: IWord[];
 }

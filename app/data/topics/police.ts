@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const police: IDeck = {
+export const police: ITopic = {
   id: 'police',
   name: 'Police',
   slug: 'police',
   icon_png: '/decks/police.png',
   icon_svg: '/decks/police.svg',
-  page_title: 'Spanish Police Flashcards',
-  seo_title: 'Spanish Police Vocabulary Flashcards with Pictures',
-  seo_description:
-    'Learn essential Spanish police and crime vocabulary with visual flashcards. Covers police equipment, investigation terms, safety, and law enforcement locations.',
+  description:
+    'Learn essential Spanish police vocabulary with our visual flashcards and words list. This topic includes police equipment, investigation terms, safety, and law enforcement locations.',
   word_count: 49,
   words: [
     {

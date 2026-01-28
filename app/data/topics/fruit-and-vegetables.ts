@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const fruitAndVegetables: IDeck = {
+export const fruitAndVegetables: ITopic = {
   id: 'fruit-and-vegetables',
   name: 'Fruit and Vegetables',
   slug: 'fruit-and-vegetables',
   icon_png: '/decks/fruit-and-vegetables.png',
   icon_svg: '/decks/fruit-and-vegetables.svg',
-  page_title: 'Spanish Fruit and Vegetables Flashcards',
-  seo_title: 'Spanish Fruit and Vegetables Flashcards with Pictures',
-  seo_description:
-    'Practice Spanish fruit and vegetables vocabulary with visual flashcards. Includes everyday produce, tropical fruits, leafy greens, and root vegetables.',
+  description:
+    'Learn essential Spanish fruit and vegetables vocabulary with our visual flashcards and words list. This topic includes everyday produce, tropical fruits, leafy greens, and root vegetables.',
   word_count: 77,
   words: [
     {

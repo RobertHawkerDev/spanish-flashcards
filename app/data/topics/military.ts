@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const military: IDeck = {
+export const military: ITopic = {
   id: 'military',
   name: 'Military',
   slug: 'military',
   icon_png: '/decks/military.png',
   icon_svg: '/decks/military.svg',
-  page_title: 'Spanish Military Vocabulary',
-  seo_title: 'Spanish Military Vocabulary with Pictures',
-  seo_description:
-    'Learn Spanish vocabulary related to the military, weapons, equipment, vehicles, and strategy using visual flashcards.',
+  description:
+    'Learn essential Spanish military vocabulary with our visual flashcards and words list. This topic includes military, weapons, equipment, vehicles, and strategy.',
   word_count: 50,
   words: [
     {

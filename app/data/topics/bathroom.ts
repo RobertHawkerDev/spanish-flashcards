@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const bathroom: IDeck = {
+export const bathroom: ITopic = {
   id: 'bathroom',
   name: 'Bathroom',
   slug: 'bathroom',
   icon_png: '/decks/bathroom.png',
   icon_svg: '/decks/bathroom.svg',
-  page_title: 'Spanish Bathroom Flashcards',
-  seo_title: 'Spanish Bathroom Flashcards with Pictures',
-  seo_description:
-    'Practice Spanish bathroom vocabulary with visual flashcards. Includes common bathroom items, toiletries, and fixtures used at home and in public restrooms.',
+  description:
+    'Learn essential Spanish bathroom vocabulary with our visual flashcards and words list. This topic includes common bathroom items, toiletries, and fixtures used at home and in public restrooms.',
   word_count: 44,
   words: [
     {

@@ -18,18 +18,18 @@ export async function generateMetadata({
 
   if (!topic) {
     return {
-      title: 'topic Not Found',
-      description: `The vocabulary topic you're looking for doesn't exist or may have been removed. Browse available ${companyName} topics.`,
+      title: 'Words List Not Found',
+      description: `The topic you are looking for does not exist or may have been removed. Return home and browse available topics on ${companyName}.`,
     };
   }
 
   return {
-    title: `Spanish ${topic.name} Vocabulary`,
+    title: `Spanish ${topic.name} Vocabulary with Pictures and Audio`,
     description: `View all vocabulary words in the ${topic.name} topic before practicing them with our interactive flashcards.`,
   };
 }
 
-export default async function WordsPage({
+export default async function WordsListPage({
   params,
 }: {
   params: Promise<{ slug: string }>;

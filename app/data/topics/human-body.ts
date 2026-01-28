@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const humanBody: IDeck = {
+export const humanBody: ITopic = {
   id: 'human-body',
   name: 'Human Body',
   slug: 'human-body',
   icon_png: '/decks/human-body.png',
   icon_svg: '/decks/human-body.svg',
-  page_title: 'Spanish Human Body Flashcards',
-  seo_title: 'Spanish Human Body Flashcards with Pictures',
-  seo_description:
-    'Practice Spanish human body vocabulary with visual flashcards. Includes external body parts, internal organs, and common anatomy-related terms.',
+  description:
+    'Learn essential Spanish human body vocabulary with our visual flashcards and words list. This topic includes external body parts, internal organs, and common anatomy-related terms.',
   word_count: 54,
   words: [
     {

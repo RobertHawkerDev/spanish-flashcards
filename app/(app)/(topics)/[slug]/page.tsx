@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-import { topics } from '@/app/data/topics/index';
+import { topics } from '@/app/data/topics';
 import companyName from '@/app/utils/company-name';
 
 export async function generateMetadata({
@@ -14,18 +14,18 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
 
-  const collection = topics.find(topic => topic.slug === slug);
+  const topic = topics.find(topic => topic.slug === slug);
 
-  if (!collection) {
+  if (!topic) {
     return {
-      title: 'topic Not Found',
-      description: `The vocabulary topic you're looking for doesn't exist or may have been removed. Browse available ${companyName} topics.`,
+      title: 'Topic Not Found',
+      description: `The topic you are looking for does not exist or may have been removed. Return home and browse available topics on ${companyName}.`,
     };
   }
 
   return {
-    title: collection.seo_title,
-    description: collection.seo_description,
+    title: `Learn ${topic.name} Vocabulary in Spanish`,
+    description: topic.description,
   };
 }
 
@@ -36,8 +36,8 @@ export default async function TopicPage({
 }) {
   const { slug } = await params;
 
-  const collection = topics.find(topic => topic.slug === slug);
-  if (!collection) return notFound();
+  const topic = topics.find(topic => topic.slug === slug);
+  if (!topic) return notFound();
 
   return (
     <main className="flex flex-1 flex-col bg-neutral-100 px-5 py-10">
@@ -48,8 +48,8 @@ export default async function TopicPage({
             <div className="relative mb-3 size-24">
               <Image
                 fill
-                src={collection.icon_svg}
-                alt={`${collection.name} icon`}
+                src={topic.icon_svg}
+                alt={`${topic.name} icon`}
                 className="pointer-events-none select-none"
                 draggable={false}
                 priority
@@ -57,25 +57,22 @@ export default async function TopicPage({
             </div>
           </div>
           <h1 className="text-2xl font-bold text-neutral-900 sm:text-3xl">
-            {collection.name}
+            {topic.name}
           </h1>
 
           <p className="mt-2 text-sm font-semibold text-neutral-600">
-            {collection.word_count} words
+            {topic.word_count} words
           </p>
 
           <p className="mt-4 max-w-3xl text-base leading-relaxed font-medium text-neutral-700">
-            {collection.seo_description}
+            {topic.description}
           </p>
         </div>
 
         {/* Options */}
         <section className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {/* Flashcards */}
-          <Link
-            href={`/${collection.slug}/flashcards`}
-            className="group rounded-xl"
-          >
+          <Link href={`/${topic.slug}/flashcards`} className="group rounded-xl">
             <div className="h-full rounded-xl border border-neutral-200 bg-white p-7 shadow-[0_2px_6px_rgba(0,0,0,0.12)] transition hover:-translate-y-px hover:shadow-[0_6px_18px_rgba(0,0,0,0.14)]">
               <div className="flex items-start justify-between gap-6">
                 <div className="flex items-start gap-4">
@@ -88,8 +85,9 @@ export default async function TopicPage({
                       Flashcards
                     </h2>
                     <p className="mt-1 text-sm font-medium text-neutral-600">
-                      Practice with quick flips and repetition — great for
-                      memorising fast.
+                      Memorize and learn words in the {topic.name.toLowerCase()}{' '}
+                      topic with our fun and interactive flashcards. Includes
+                      translations, pictures and audio.
                     </p>
                   </div>
                 </div>
@@ -106,7 +104,7 @@ export default async function TopicPage({
           </Link>
 
           {/* Words list */}
-          <Link href={`/${collection.slug}/words`} className="group rounded-xl">
+          <Link href={`/${topic.slug}/words`} className="group rounded-xl">
             <div className="h-full rounded-xl border border-neutral-200 bg-white p-7 shadow-[0_2px_6px_rgba(0,0,0,0.12)] transition hover:-translate-y-px hover:shadow-[0_6px_18px_rgba(0,0,0,0.14)]">
               <div className="flex items-start justify-between gap-6">
                 <div className="flex items-start gap-4">
@@ -119,8 +117,10 @@ export default async function TopicPage({
                       Words List
                     </h2>
                     <p className="mt-1 text-sm font-medium text-neutral-600">
-                      Review every word with its translation — ideal before a
-                      practice session.
+                      Browse a complete list of words in the{' '}
+                      {topic.name.toLowerCase()} topic. Learn with clear
+                      translations, pictures, and audio to support effective
+                      language learning.
                     </p>
                   </div>
                 </div>

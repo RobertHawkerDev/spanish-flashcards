@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const summerCamp: IDeck = {
+export const summerCamp: ITopic = {
   id: 'summer-camp',
   name: 'Summer Camp',
   slug: 'summer-camp',
   icon_png: '/decks/summer-camp.png',
   icon_svg: '/decks/summer-camp.svg',
-  page_title: 'Spanish Summer Camp Flashcards',
-  seo_title: 'Spanish Summer Camp Vocabulary Flashcards with Pictures',
-  seo_description:
-    'Learn essential Spanish summer camp and outdoor vocabulary with visual flashcards. Covers camping gear, safety items, activities, and nature.',
+  description:
+    'Learn essential Spanish summer camp vocabulary with our visual flashcards and words list. This topic includes camping gear, safety items, activities, and nature.',
   word_count: 47,
   words: [
     {

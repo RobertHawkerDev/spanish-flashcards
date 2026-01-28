@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const pets: IDeck = {
+export const pets: ITopic = {
   id: 'pets',
   name: 'Pets',
   slug: 'pets',
   icon_png: '/decks/pets.png',
   icon_svg: '/decks/pets.svg',
-  page_title: 'Spanish Pets Vocabulary',
-  seo_title: 'Spanish Pets Vocabulary with Pictures',
-  seo_description:
-    'Learn Spanish vocabulary for pets, pet care, accessories, and common pet animals using visual flashcards.',
+  description:
+    'Learn essential Spanish pets vocabulary with our visual flashcards and words list. This topic includes pets, pet care, accessories, and common pet animals.',
   word_count: 59,
   words: [
     {

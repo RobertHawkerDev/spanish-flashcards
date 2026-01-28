@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const globalWarming: IDeck = {
+export const globalWarming: ITopic = {
   id: 'global-warming',
   name: 'Global Warming',
   slug: 'global-warming',
   icon_png: '/decks/global-warming.png',
   icon_svg: '/decks/global-warming.svg',
-  page_title: 'Spanish Global Warming Vocabulary',
-  seo_title: 'Spanish Global Warming Vocabulary with Pictures',
-  seo_description:
-    'Learn Spanish vocabulary related to global warming, climate change, pollution, renewable energy, and environmental threats using visual flashcards.',
+  description:
+    'Learn essential Spanish global warming vocabulary with our visual flashcards and words list. This topic includes global warming, climate change, pollution, renewable energy, and environmental threats.',
   word_count: 47,
   words: [
     {

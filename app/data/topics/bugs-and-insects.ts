@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const bugsAndInsects: IDeck = {
+export const bugsAndInsects: ITopic = {
   id: 'bugs-and-insects',
   name: 'Bugs and Insects',
   slug: 'bugs-and-insects',
   icon_png: '/decks/bugs-and-insects.png',
   icon_svg: '/decks/bugs-and-insects.svg',
-  page_title: 'Spanish Bugs and Insects Vocabulary',
-  seo_title: 'Spanish Bugs and Insects Vocabulary with Pictures',
-  seo_description:
-    'Learn Spanish vocabulary for bugs and insects, including common insects, life stages, and less familiar species using visual flashcards.',
+  description:
+    'Learn essential Spanish bugs and insects vocabulary with our visual flashcards and words list. This topic includes common insects, life stages, and less familiar species.',
   word_count: 24,
   words: [
     {

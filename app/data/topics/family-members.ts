@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const familyMembers: IDeck = {
+export const familyMembers: ITopic = {
   id: 'family-members',
   name: 'Family Members',
   slug: 'family-members',
   icon_png: '/decks/family-members.png',
   icon_svg: '/decks/family-members.svg',
-  page_title: 'Spanish Family Members Flashcards',
-  seo_title: 'Spanish Family Members Flashcards with Pictures',
-  seo_description:
-    'Practice Spanish family members vocabulary with visual flashcards. Includes relatives, partners, and family roles across different generations.',
+  description:
+    'Learn essential Spanish family members vocabulary with our visual flashcards and words list. This topic includes relatives, partners, and family roles across different generations.',
   word_count: 54,
   words: [
     {

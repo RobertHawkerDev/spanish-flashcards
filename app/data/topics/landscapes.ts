@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const landscapes: IDeck = {
+export const landscapes: ITopic = {
   id: 'landscapes',
   name: 'Landscapes',
   slug: 'landscapes',
   icon_png: '/decks/landscapes.png',
   icon_svg: '/decks/landscapes.svg',
-  page_title: 'Spanish Landscapes Vocabulary',
-  seo_title: 'Spanish Landscapes Vocabulary with Pictures',
-  seo_description:
-    'Learn Spanish vocabulary for landscapes, natural features, places, and scenery using visual flashcards.',
+  description:
+    'Learn essential Spanish landscapes vocabulary with our visual flashcards and words list. This topic includes landscapes, natural features, places, and scenery.',
   word_count: 47,
   words: [
     {

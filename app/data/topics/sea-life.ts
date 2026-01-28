@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const seaLife: IDeck = {
+export const seaLife: ITopic = {
   id: 'sea-life',
   name: 'Sea Life',
   slug: 'sea-life',
   icon_png: '/decks/sea-life.png',
   icon_svg: '/decks/sea-life.svg',
-  page_title: 'Spanish Sea Life Vocabulary',
-  seo_title: 'Spanish Sea Life Vocabulary with Pictures',
-  seo_description:
-    'Learn Spanish vocabulary for sea life, ocean animals, fish, and marine ecosystems using visual flashcards.',
+  description:
+    'Learn essential Spanish sea life vocabulary with our visual flashcards and words list. This topic includes sea life, ocean animals, fish, and marine ecosystems.',
   word_count: 46,
   words: [
     {

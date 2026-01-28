@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const sport: IDeck = {
+export const sport: ITopic = {
   id: 'sport',
   name: 'Sport',
   slug: 'sport',
   icon_png: '/decks/sport.png',
   icon_svg: '/decks/sport.svg',
-  page_title: 'Spanish Sports Vocabulary',
-  seo_title: 'Spanish Sports Vocabulary with Pictures',
-  seo_description:
-    'Learn Spanish vocabulary for sports, equipment, training, and games using visual flashcards.',
+  description:
+    'Learn essential Spanish sport vocabulary with our visual flashcards and words list. This topic includes sports, equipment, training, and games.',
   word_count: 50,
   words: [
     {

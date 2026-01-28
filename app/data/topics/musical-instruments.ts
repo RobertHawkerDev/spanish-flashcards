@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const musicalInstruments: IDeck = {
+export const musicalInstruments: ITopic = {
   id: 'musical-instruments',
   name: 'Musical Instruments',
   slug: 'musical-instruments',
   icon_png: '/decks/musical-instruments.png',
   icon_svg: '/decks/musical-instruments.svg',
-  page_title: 'Spanish Musical Instruments Flashcards',
-  seo_title: 'Spanish Musical Instruments Flashcards with Pictures',
-  seo_description:
-    'Practice Spanish musical instruments vocabulary with visual flashcards. Includes string, wind, percussion, and electronic instruments from around the world.',
+  description:
+    'Learn essential Spanish musical instruments vocabulary with our visual flashcards and words list. This topic includes string, wind, percussion, and electronic instruments from around the world.',
   word_count: 62,
   words: [
     {

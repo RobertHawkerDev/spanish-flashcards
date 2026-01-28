@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const artStudio: IDeck = {
+export const artStudio: ITopic = {
   id: 'art-studio',
   name: 'Art Studio',
   slug: 'art-studio',
   icon_png: '/decks/art-studio.png',
   icon_svg: '/decks/art-studio.svg',
-  page_title: 'Spanish Art Studio Flashcards',
-  seo_title: 'Spanish Art Studio Vocabulary Flashcards with Pictures',
-  seo_description:
-    'Learn essential Spanish art studio and crafts vocabulary with visual flashcards. Covers tools, materials, painting, sewing, and creative techniques.',
+  description:
+    'Learn essential Spanish art studio and crafts vocabulary with our visual flashcards and words list. This topic includes tools, materials, painting, sewing, and creative techniques.',
   word_count: 47,
   words: [
     {

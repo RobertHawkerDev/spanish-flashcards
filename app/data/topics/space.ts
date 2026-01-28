@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const space: IDeck = {
+export const space: ITopic = {
   id: 'space',
   name: 'Space',
   slug: 'space',
   icon_png: '/decks/space.png',
   icon_svg: '/decks/space.svg',
-  page_title: 'Spanish Space Vocabulary',
-  seo_title: 'Spanish Space Vocabulary with Pictures',
-  seo_description:
-    'Learn Spanish vocabulary related to space, planets, astronomy, space missions, and exploration using visual flashcards.',
+  description:
+    'Learn essential Spanish space vocabulary with our visual flashcards and words list. This topic includes planets, astronomy, space missions, and exploration.',
   word_count: 44,
   words: [
     {

@@ -1,15 +1,13 @@
-import IDeck from '@/app/interfaces/topic';
+import ITopic from '@/app/interfaces/topic';
 
-export const stationery: IDeck = {
+export const stationery: ITopic = {
   id: 'stationery',
   name: 'Stationery',
   slug: 'stationery',
   icon_png: '/decks/stationery.png',
   icon_svg: '/decks/stationery.svg',
-  page_title: 'Spanish Stationery Flashcards',
-  seo_title: 'Spanish Stationery Vocabulary Flashcards with Pictures',
-  seo_description:
-    'Learn essential Spanish stationery and school supplies vocabulary with visual flashcards. Covers paper items, writing tools, office supplies, and art materials.',
+  description:
+    'Learn essential Spanish stationery vocabulary with our visual flashcards and words list. This topic includes paper items, writing tools, office supplies, and art materials.',
   word_count: 48,
   words: [
     {
