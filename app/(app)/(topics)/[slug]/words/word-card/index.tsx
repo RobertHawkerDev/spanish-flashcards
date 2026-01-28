@@ -1,10 +1,8 @@
-'use client';
-
-import { LucideVolume2 } from 'lucide-react';
 import Image from 'next/image';
 
 import IWord from '@/app/interfaces/word';
-import handleWordPronunciation from '@/app/utils/pronunciation/handle-pronunciation';
+
+import WordCardAudioButton from './word-card-audio-button';
 
 export default function WordCard({
   word,
@@ -15,7 +13,6 @@ export default function WordCard({
 }) {
   return (
     <div
-      key={word.id}
       className={[
         'flex items-center justify-between gap-4 px-5 py-4 sm:gap-6 sm:px-6',
         'transition-colors',
@@ -23,32 +20,29 @@ export default function WordCard({
         isLast ? '' : 'border-b border-b-neutral-200 dark:border-b-neutral-700',
       ].join(' ')}
     >
-      <div className="flex flex-row gap-8">
-        <div className="relative size-14 shrink-0">
+      <div className="flex min-w-0 items-center gap-5 sm:gap-8">
+        <div className="relative size-12 shrink-0 sm:size-14">
           <Image
             fill
             alt={`${word.english} icon`}
             src={`/words/${word.icon_svg}`}
             className="pointer-events-none select-none"
             draggable={false}
+            sizes="56px"
           />
         </div>
 
         <div className="min-w-0">
-          <p className="truncate text-base font-semibold text-neutral-900 sm:text-lg dark:text-neutral-50">
+          <p className="line-clamp-2 text-base font-semibold wrap-anywhere text-neutral-900 sm:text-lg dark:text-neutral-50">
             {word.spanish_article} {word.spanish}
           </p>
-          <p className="truncate text-base font-medium text-neutral-600 dark:text-neutral-300">
+          <p className="truncate text-sm font-medium text-neutral-600 sm:text-base dark:text-neutral-300">
             {word.english}
           </p>
         </div>
       </div>
-      <button
-        className="flex size-10 items-center justify-center rounded-full bg-neutral-100 hover:cursor-pointer hover:bg-neutral-200"
-        onClick={event => handleWordPronunciation(event, word)}
-      >
-        <LucideVolume2 size={20} />
-      </button>
+
+      <WordCardAudioButton word={word} />
     </div>
   );
 }

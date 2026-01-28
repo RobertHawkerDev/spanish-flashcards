@@ -1,4 +1,7 @@
-import { Metadata } from 'next';
+// 👇 add this import (Node runtime)
+import crypto from 'node:crypto';
+
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import { topics } from '@/app/data/topics/index';
@@ -12,8 +15,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-
-  const topic = topics.find(topic => topic.slug === slug);
+  const topic = topics.find(t => t.slug === slug);
 
   if (!topic) {
     return {
@@ -35,14 +37,21 @@ export default async function FlashcardsPage({
 }) {
   const { slug } = await params;
 
-  const topic = topics.find(topic => topic.slug === slug);
-
+  const topic = topics.find(t => t.slug === slug);
   if (!topic) return notFound();
 
+  // ✅ new value on every full reload, but consistent for SSR + hydration
+  const seedBase = crypto.randomUUID();
+
   return (
-    <main className="flex flex-1 flex-col bg-neutral-100 py-4">
-      <div className="w-full">
-        <DeckClient title={topic.name} slug={slug} words={topic.words} />
+    <main className="flex flex-1 flex-col px-4 pt-4 pb-[calc(env(safe-area-inset-bottom)+7rem)] sm:px-6 sm:pt-6 md:pt-8">
+      <div className="mx-auto w-full max-w-4xl">
+        <DeckClient
+          title={topic.name}
+          slug={slug}
+          words={topic.words}
+          seedBase={seedBase}
+        />
       </div>
     </main>
   );

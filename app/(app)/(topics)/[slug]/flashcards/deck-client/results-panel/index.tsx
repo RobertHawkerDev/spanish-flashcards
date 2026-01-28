@@ -55,7 +55,7 @@ export default function ResultsPanel({
           <button
             type="button"
             onClick={onRestart}
-            className="inline-flex min-w-52 items-center justify-center gap-2 rounded-full bg-amber-400 px-6 py-4 font-semibold text-neutral-900 hover:bg-amber-500 active:scale-[0.99]"
+            className="inline-flex min-w-52 items-center justify-center gap-2 rounded-full bg-amber-400 px-6 py-4 font-semibold text-neutral-900 hover:cursor-pointer hover:bg-amber-500 active:scale-[0.99]"
           >
             <RotateCcw size={20} />
             <span className="text-base">Restart</span>

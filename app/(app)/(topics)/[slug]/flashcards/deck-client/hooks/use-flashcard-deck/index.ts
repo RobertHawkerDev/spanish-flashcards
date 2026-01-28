@@ -18,23 +18,40 @@ type HistoryAction = {
 export type Feedback = { title: string; message: string };
 
 function getFeedback(percentage: number): Feedback {
-  if (percentage === 100)
-    return { title: 'Perfect!', message: '100% — you smashed it. 🔥' };
-  if (percentage >= 90)
-    return { title: 'Excellent!', message: '90%+ — seriously strong. 💪' };
-  if (percentage >= 75)
+  if (percentage === 100) {
     return {
-      title: 'Great job!',
-      message: 'You’re getting really solid now. Keep going. ✅',
+      title: 'Outstanding',
+      message: 'Perfect score. You demonstrated complete mastery of this set.',
     };
-  if (percentage >= 50)
+  }
+
+  if (percentage >= 90) {
+    return {
+      title: 'Excellent',
+      message: 'Very strong result. You clearly understand this vocabulary.',
+    };
+  }
+
+  if (percentage >= 75) {
+    return {
+      title: 'Well done',
+      message:
+        'Good progress overall. A little more practice will help reinforce accuracy.',
+    };
+  }
+
+  if (percentage >= 50) {
     return {
       title: 'Good progress',
-      message: 'Nice — a bit more repetition and you’ll lock it in. 👍',
+      message:
+        'You are on the right track. Review the incorrect words and try again.',
     };
+  }
+
   return {
-    title: 'Let’s warm up',
-    message: 'Totally fine — restart and you’ll improve fast. 🚀',
+    title: 'Keep practicing',
+    message:
+      'This set needs more review. Repeating the deck will help build confidence.',
   };
 }
 

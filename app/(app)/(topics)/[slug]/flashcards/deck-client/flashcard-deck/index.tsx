@@ -45,31 +45,31 @@ export default function FlashcardDeck({
   };
 
   return (
-    <div className="flex flex-1 flex-col gap-5">
-      <ProgressBar
-        label={title}
-        showCount={true}
-        current={current}
-        total={total}
-      />
+    <section className="mx-auto w-full max-w-3xl">
+      <div className="flex flex-1 flex-col gap-5 sm:gap-6 lg:gap-7">
+        <ProgressBar
+          label={title}
+          showCount={true}
+          current={current}
+          total={total}
+          className="pt-1"
+        />
 
-      {/* Card */}
-      <WordCard
-        key={word.id}
-        word={word}
-        deckSlug={deckSlug}
-        cardIndex={current}
-        onFirstFlip={onFirstFlip}
-      />
+        <WordCard
+          key={word.id}
+          word={word}
+          deckSlug={deckSlug}
+          cardIndex={current}
+          onFirstFlip={onFirstFlip}
+        />
 
-      {/* Actions */}
-      <div className="flex flex-col gap-4">
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-2">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4">
           <button
             type="button"
             onClick={() => handleAnswer(false)}
             className={[
-              'flex flex-col items-center justify-center gap-3 rounded-xl border bg-white px-5 py-4 text-left',
+              'flex flex-col items-center justify-center gap-3 rounded-xl border bg-white px-5 py-4 hover:cursor-pointer sm:py-5',
+              'min-h-24 sm:min-h-28', // optional but helps consistency across devices
               'border-neutral-200 shadow-[0_2px_6px_rgba(0,0,0,0.12)]',
               'transition active:scale-[0.99]',
               'hover:bg-neutral-50',
@@ -77,10 +77,10 @@ export default function FlashcardDeck({
               'dark:shadow-[0_8px_24px_rgba(0,0,0,0.45)]',
             ].join(' ')}
           >
-            <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-red-500 text-white">
+            <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-red-500 text-white sm:size-12">
               <LucideX />
             </span>
-            <span className="pointer-events-none text-sm font-semibold text-neutral-900 select-none dark:text-neutral-50">
+            <span className="pointer-events-none text-sm font-semibold text-neutral-900 select-none sm:text-base dark:text-neutral-50">
               Incorrect
             </span>
           </button>
@@ -89,7 +89,8 @@ export default function FlashcardDeck({
             type="button"
             onClick={() => handleAnswer(true)}
             className={[
-              'flex flex-col items-center justify-center gap-2 rounded-xl border bg-white text-left',
+              'flex flex-col items-center justify-center gap-3 rounded-xl border bg-white px-5 py-4 hover:cursor-pointer sm:py-5',
+              'min-h-24 sm:min-h-28', // optional but helps consistency across devices
               'border-neutral-200 shadow-[0_2px_6px_rgba(0,0,0,0.12)]',
               'transition active:scale-[0.99]',
               'hover:bg-neutral-50',
@@ -97,15 +98,15 @@ export default function FlashcardDeck({
               'dark:shadow-[0_8px_24px_rgba(0,0,0,0.45)]',
             ].join(' ')}
           >
-            <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-green-500 text-white">
+            <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-green-500 text-white sm:size-12">
               <LucideCheck />
             </span>
-            <span className="pointer-events-none text-sm font-semibold text-neutral-900 select-none dark:text-neutral-50">
+            <span className="pointer-events-none text-sm font-semibold text-neutral-900 select-none sm:text-base dark:text-neutral-50">
               Correct
             </span>
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

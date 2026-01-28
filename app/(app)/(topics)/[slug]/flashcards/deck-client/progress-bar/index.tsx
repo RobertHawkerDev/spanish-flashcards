@@ -1,23 +1,12 @@
-// app/components/progress-bar.tsx
-import * as React from 'react';
+import { useId } from 'react';
 
 type ProgressBarProperties = {
-  /** 0..100. If you pass `current` + `total`, this is calculated automatically. */
   value?: number;
-  /** Optional: if provided with `total`, value is calculated as (current/total)*100 */
   current?: number;
   total?: number;
-
-  /** Optional label shown above the bar (left) */
   label?: string;
-
-  /** Optional: show "current / total" on the right (like the screenshot) */
   showCount?: boolean;
-
-  /** Tailwind overrides */
   className?: string;
-
-  /** Height of the bar in px (default: 6) */
   heightPx?: number;
 };
 
@@ -43,12 +32,19 @@ export default function ProgressBar({
 
   const pct = clamp(computed);
 
+  const labelId = useId();
+
+  const hasName = Boolean(label); // if label is empty, fallback to aria-label below
+
   return (
     <div className={['w-full', className].join(' ')}>
       {(label || showCount) && (
         <div className="mb-2 flex items-center justify-between">
           {label ? (
-            <span className="text-sm font-semibold text-neutral-800 dark:text-neutral-200">
+            <span
+              id={labelId}
+              className="text-sm font-semibold text-neutral-800 dark:text-neutral-200"
+            >
               {label}
             </span>
           ) : (
@@ -72,6 +68,8 @@ export default function ProgressBar({
         aria-valuenow={Math.round(pct)}
         aria-valuemin={0}
         aria-valuemax={100}
+        aria-labelledby={hasName ? labelId : undefined}
+        aria-label={hasName ? undefined : 'Progress'}
       >
         <div
           className="h-full rounded-full bg-amber-400 transition-[width] duration-300 ease-out"
