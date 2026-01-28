@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
+const isOnVercel = !!process.env.VERCEL;
+const isProduction = process.env.NODE_ENV === 'production';
+
 export const metadata: Metadata = {
   title: {
     default: `${companyName} | Spanish Vocabulary Flashcards with Pictures`,
@@ -39,8 +42,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <Analytics />
-        <SpeedInsights />
+        {isOnVercel && isProduction && <Analytics />}
+        {isOnVercel && isProduction && <SpeedInsights />}
       </body>
     </html>
   );

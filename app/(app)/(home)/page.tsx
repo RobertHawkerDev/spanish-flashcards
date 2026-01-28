@@ -7,11 +7,15 @@ export default function HomePage() {
       <h1 className="text-xl font-bold md:text-2xl">
         Pick a topic and start learning Spanish
       </h1>
-      <div className="mt-6 grid auto-rows-fr grid-cols-2 gap-4 md:mt-8 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
+      <ul className="m-0 mt-6 grid list-none auto-rows-fr grid-cols-2 gap-4 p-0 md:mt-8 md:grid-cols-3 md:gap-8 lg:grid-cols-4">
         {topics.map(topic => {
-          return <TopicLink key={topic.id} topic={topic} />;
+          return (
+            <li key={topic.id} className="h-full">
+              <TopicLink topic={topic} />
+            </li>
+          );
         })}
-      </div>
+      </ul>
     </main>
   );
 }
